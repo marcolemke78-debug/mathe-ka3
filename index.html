@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathe-Trainer – Klassenarbeit 3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  <aside id="sidebar">
+    <h2>Lektionen</h2>
+    <div id="module-m1">
+      <h3>Lineare Funktionen</h3>
+      <ul id="lesson-list-m1"></ul>
+    </div>
+    <div id="module-m2">
+      <h3>Gleichungssysteme</h3>
+      <ul id="lesson-list-m2"></ul>
+    </div>
+    <button id="reset-progress">Fortschritt zurücksetzen</button>
+  </aside>
+  <main id="content">
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="lesson-container"></div>
+  </main>
+  <script src="js/progress.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/lessons-funktionen.js"></script>
+  <script src="js/lessons-gleichungssysteme.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
