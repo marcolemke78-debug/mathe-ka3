@@ -33,7 +33,7 @@ const Renderer = {
   },
 
   renderProgressBar() {
-    const percent = Progress.getCompletionPercent(1, 12);
+    const percent = Progress.getCompletionPercent(1, 13);
     const bar = document.getElementById('progress-bar');
     bar.style.width = percent + '%';
   },

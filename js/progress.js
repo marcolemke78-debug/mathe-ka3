@@ -1,7 +1,7 @@
 const Progress = {
   STORAGE_KEY: 'leonie_mathe_ka3_progress',
-  VERSION: 1,
-  TOTAL_LESSONS: 12,
+  VERSION: 2,
+  TOTAL_LESSONS: 13,
 
   createDefault() {
     const data = { version: this.VERSION, lessons: {}, lastLesson: 1 };

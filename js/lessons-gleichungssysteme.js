@@ -1,16 +1,16 @@
 const LessonsGleichungssysteme = [
   // ============================================================
-  // Lektion 7: Lineare Gleichungen mit zwei Variablen
+  // Lektion 8: Lineare Gleichungen mit zwei Variablen
   // ============================================================
   {
-    id: 7,
+    id: 8,
     title: 'Lineare Gleichungen mit zwei Variablen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 11:</strong> Lineare Gleichungen mit zwei Variablen<br>
-          <strong>Buch:</strong> S. 101 | <strong>Aufgaben:</strong> S. 101 Nr. A, B, 3h<br>
+          <strong>Vorbereitungsblatt Nr. 1 (LGS):</strong> Lineare Gleichungen mit zwei Variablen<br>
+          <strong>Buch:</strong> S. 101 | <strong>Aufgaben:</strong> S. 101 Nr. A, B, 5li.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 101 aufmerksam durchlesen!
         </div>
 
@@ -67,7 +67,10 @@ const LessonsGleichungssysteme = [
           Die Gerade hat unendlich viele Punkte -> unendlich viele Loesungen!
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2003.JPG" alt="Buch S. 101 - Gleichungen mit zwei Variablen" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: y = -2x + 10 mit Loesungspunkten und einem Nicht-Loesungspunkt
@@ -165,16 +168,16 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 8: Gleichungssysteme grafisch loesen
+  // Lektion 9: Gleichungssysteme grafisch loesen
   // ============================================================
   {
-    id: 8,
+    id: 9,
     title: 'Gleichungssysteme grafisch lösen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 12:</strong> Lineare Gleichungssysteme<br>
+          <strong>Vorbereitungsblatt Nr. 2 (LGS):</strong> Lineare Gleichungssysteme<br>
           <strong>Buch:</strong> S. 103 | <strong>Aufgaben:</strong> S. 103 Nr. A, B<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 103 aufmerksam durchlesen!
         </div>
@@ -221,7 +224,10 @@ const LessonsGleichungssysteme = [
           Immer die Probe machen, um sicherzugehen.
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2004.JPG" alt="Buch S. 103 - LGS grafisch loesen" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: y = x + 1 und y = -x + 5, Schnittpunkt (2,3)
@@ -335,17 +341,17 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 9: Gleichsetzungsverfahren
+  // Lektion 10: Gleichsetzungsverfahren
   // ============================================================
   {
-    id: 9,
+    id: 10,
     title: 'Gleichsetzungsverfahren',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 13:</strong> Gleichsetzungsverfahren<br>
-          <strong>Buch:</strong> S. 106 | <strong>Aufgaben:</strong> S. 106 Nr. 3, A, 3h<br>
+          <strong>Vorbereitungsblatt Nr. 3 (LGS):</strong> Gleichsetzungsverfahren<br>
+          <strong>Buch:</strong> S. 106 | <strong>Aufgaben:</strong> S. 106 Nr. 3, A, 5li.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 106 aufmerksam durchlesen!
         </div>
 
@@ -414,7 +420,10 @@ const LessonsGleichungssysteme = [
           Dann kann man direkt gleichsetzen, ohne vorher umstellen zu muessen.
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2005.JPG" alt="Buch S. 106 - Gleichsetzungsverfahren" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: y = 3x - 2 und y = -x + 6, Schnittpunkt (2, 4)
@@ -518,17 +527,17 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 10: Einsetzungsverfahren
+  // Lektion 11: Einsetzungsverfahren
   // ============================================================
   {
-    id: 10,
+    id: 11,
     title: 'Einsetzungsverfahren',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 14:</strong> Einsetzungsverfahren<br>
-          <strong>Buch:</strong> S. 109 | <strong>Aufgaben:</strong> S. 109 Nr. 1, A, 5l<br>
+          <strong>Vorbereitungsblatt Nr. 4 (LGS):</strong> Einsetzungsverfahren<br>
+          <strong>Buch:</strong> S. 109 | <strong>Aufgaben:</strong> S. 109 Nr. 1, A, 5li.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 109 aufmerksam durchlesen!
         </div>
 
@@ -613,7 +622,10 @@ const LessonsGleichungssysteme = [
           -(a - b) = -a + b, nicht -a - b!
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2006.JPG" alt="Buch S. 109 - Einsetzungsverfahren" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: x + y = 7 (y = -x + 7) und 2x - y = 5 (y = 2x - 5), Schnittpunkt (4, 3)
@@ -718,17 +730,17 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 11: Additionsverfahren
+  // Lektion 12: Additionsverfahren
   // ============================================================
   {
-    id: 11,
+    id: 12,
     title: 'Additionsverfahren',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 15-18:</strong> Additionsverfahren<br>
-          <strong>Buch:</strong> S. 110-112 | <strong>Aufgaben:</strong> S. 110 Nr. 1; S. 111 Nr. 2; S. 112 Nr. 2<br>
+          <strong>Vorbereitungsblatt Nr. 5 (LGS):</strong> Additionsverfahren<br>
+          <strong>Buch:</strong> S. 110-111 | <strong>Aufgaben:</strong> S. 110 Nr. 1, 2; S. 111 Nr. 3<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 110 aufmerksam durchlesen!
         </div>
 
@@ -821,7 +833,11 @@ const LessonsGleichungssysteme = [
           musst du erst eine oder beide Gleichungen mit einem passenden Faktor multiplizieren!
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseiten anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2007.JPG" alt="Buch S. 110 - Additionsverfahren" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2008.JPG" alt="Buch S. 111 - Additionsverfahren" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: 3x+2y=16 (y=-1.5x+8) und 3x-2y=8 (y=1.5x-4), Schnittpunkt (4,2)
@@ -926,17 +942,17 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 12: Loesungsvielfalt
+  // Lektion 13: Loesungsvielfalt
   // ============================================================
   {
-    id: 12,
+    id: 13,
     title: 'Lösungsvielfalt',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 18-19:</strong> Loesungsvielfalt / Rueckspiegel Gleichungssysteme<br>
-          <strong>Buch:</strong> S. 112 | <strong>Aufgaben:</strong> S. 112 Nr. 3, A<br>
+          <strong>Vorbereitungsblatt Nr. 6 (LGS):</strong> Loesungsvielfalt<br>
+          <strong>Buch:</strong> S. 112-113 | <strong>Aufgaben:</strong> S. 112 Nr. 2; S. 113 Nr. 3, A<br>
           <strong>Rueckspiegel Gleichungssysteme:</strong> S. 120<br>
           <strong>Tipp:</strong> Merke auf S. 112 lesen. Zum Wiederholen den Rueckspiegel S. 120 rechnen!
         </div>
@@ -1001,7 +1017,11 @@ const LessonsGleichungssysteme = [
           <strong>Merke:</strong> Gleiche Steigung = parallel oder identisch. Verschiedene Steigung = genau ein Schnittpunkt.
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseiten anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2009.JPG" alt="Buch S. 112 - Loesungsvielfalt" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2010.JPG" alt="Buch S. 113 - Loesungsvielfalt" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Drei statische Graphen nebeneinander

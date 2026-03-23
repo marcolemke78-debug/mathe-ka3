@@ -1,16 +1,289 @@
 const LessonsFunktionen = [
   // ============================================================
-  // Lektion 1: Proportionale Funktionen
+  // Lektion 1: Funktionen
   // ============================================================
   {
     id: 1,
+    title: 'Funktionen',
+    explanation: {
+      html: `
+        <div class="book-ref">
+          <div class="book-title">Im Buch nachschlagen</div>
+          <strong>Vorbereitungsblatt Nr. 1:</strong> Funktionen<br>
+          <strong>Buch:</strong> S. 67 | <strong>Aufgaben:</strong> S. 67 Nr. A, B, 4 li.<br>
+          <strong>Tipp:</strong> Merke und Beispiele auf S. 67 aufmerksam durchlesen!
+        </div>
+
+        <h3>Was ist eine Funktion?</h3>
+        <div class="info-box">
+          Eine <strong>Funktion</strong> ist eine <strong>eindeutige Zuordnung</strong>:
+          Jedem x-Wert wird <strong>genau ein</strong> y-Wert zugeordnet.
+        </div>
+
+        <h4>Alltagsbeispiel: Temperatur im Tagesverlauf</h4>
+        <p>
+          Um 8 Uhr sind es 12 Grad, um 12 Uhr 18 Grad, um 16 Uhr 21 Grad.
+          Zu <strong>jeder Uhrzeit</strong> gibt es <strong>genau eine Temperatur</strong> - das ist eine Funktion!
+          Aber umgekehrt? 18 Grad koennte es um 12 Uhr UND um 20 Uhr haben - das ist OK,
+          denn die Zuordnung geht von x (Uhrzeit) zu y (Temperatur), nicht umgekehrt.
+        </p>
+
+        <h4>Drei Darstellungsformen</h4>
+        <p>Eine Funktion kann man auf verschiedene Arten darstellen:</p>
+        <ul>
+          <li><strong>Wertetabelle:</strong> Eine Tabelle mit x- und y-Werten</li>
+          <li><strong>Graph (Schaubild):</strong> Eine Kurve oder Gerade im Koordinatensystem</li>
+          <li><strong>Gleichung:</strong> z. B. y = 2x + 1</li>
+        </ul>
+
+        <h4>Funktionswerte ablesen</h4>
+        <p>
+          Wenn du den <strong>x-Wert</strong> kennst, kannst du den zugehoerigen <strong>y-Wert</strong>
+          (= Funktionswert) am Graphen ablesen. Gehe dazu vom x-Wert senkrecht nach oben (oder unten)
+          bis zur Kurve und lies den y-Wert ab.
+        </p>
+        <p>Hier siehst du eine einfache Funktion mit markierten Punkten:</p>
+        <div id="graph-fn-read" class="math-graph"></div>
+
+        <h4>Wann ist etwas KEINE Funktion?</h4>
+        <div class="warning-box">
+          <strong>Keine Funktion:</strong> Wenn einem x-Wert <strong>zwei verschiedene y-Werte</strong>
+          zugeordnet werden. Zum Beispiel: Ein Kreis ist keine Funktion, weil es zu manchen x-Werten
+          zwei y-Werte gibt (einen oben und einen unten).
+        </div>
+      `,
+      onRender: function () {
+        MathGraph.create('graph-fn-read', {
+          xRange: [-1, 6],
+          yRange: [-1, 8],
+          lines: [
+            { m: 1.5, b: 0.5, color: '#3B82F6', label: 'f(x)' }
+          ],
+          points: [
+            { x: 1, y: 2, color: '#3B82F6', label: '(1|2)' },
+            { x: 3, y: 5, color: '#3B82F6', label: '(3|5)' }
+          ]
+        });
+      }
+    },
+    example: {
+      title: 'Funktionswerte aus einem Graphen ablesen',
+      steps: [
+        {
+          label: 'Schritt 1: x-Wert finden',
+          html: 'Suche den x-Wert auf der waagerechten Achse, z. B. <strong>x = 2</strong>.'
+        },
+        {
+          label: 'Schritt 2: Senkrecht zur Kurve gehen',
+          html: 'Gehe vom Punkt x = 2 <strong>senkrecht nach oben</strong> bis du die Kurve triffst.'
+        },
+        {
+          label: 'Schritt 3: y-Wert ablesen',
+          html: 'Lies an der y-Achse ab, auf welcher Hoehe du die Kurve getroffen hast. Hier: <strong>y = 3,5</strong>.'
+        },
+        {
+          label: 'Schritt 4: Ergebnis notieren',
+          html: '<div class="example-calc">Der Funktionswert an der Stelle x = 2 ist <strong>f(2) = 3,5</strong>.</div>'
+        }
+      ]
+    },
+    exercises: [
+      {
+        type: 'multiple-choice',
+        question: 'Was bedeutet es, wenn eine Zuordnung eine <strong>Funktion</strong> ist?',
+        options: [
+          'Jedem x-Wert werden zwei y-Werte zugeordnet',
+          'Jedem x-Wert wird genau ein y-Wert zugeordnet',
+          'Jedem y-Wert wird genau ein x-Wert zugeordnet',
+          'Es gibt nur positive Werte'
+        ],
+        correct: 1,
+        explanation: 'Bei einer Funktion wird jedem x-Wert genau ein y-Wert zugeordnet. Es darf also nicht passieren, dass ein x-Wert zwei verschiedene y-Werte hat.'
+      },
+      {
+        type: 'fill-table',
+        question: 'Die Funktion ordnet jedem x-Wert das <strong>Doppelte plus 1</strong> zu (also y = 2x + 1). F\u00FClle die Wertetabelle aus.',
+        xValues: [0, 1, 2, 3, 4],
+        correctYValues: [1, 3, 5, 7, 9],
+        givenIndices: [0],
+        explanation: 'Setze jeden x-Wert ein: x = 1 \u2192 y = 2\u00B71 + 1 = 3. x = 2 \u2192 y = 2\u00B72 + 1 = 5. x = 3 \u2192 y = 2\u00B73 + 1 = 7. x = 4 \u2192 y = 2\u00B74 + 1 = 9.',
+        hint: 'Rechne f\u00FCr jeden x-Wert: y = 2 \u00B7 x + 1'
+      },
+      {
+        type: 'multiple-choice',
+        question: 'Auf welche Arten kann man eine Funktion darstellen?',
+        options: [
+          'Nur als Gleichung',
+          'Als Wertetabelle, Graph oder Gleichung',
+          'Nur als Graph',
+          'Nur als Wertetabelle'
+        ],
+        correct: 1,
+        explanation: 'Funktionen k\u00F6nnen auf drei Arten dargestellt werden: als Wertetabelle (Tabelle mit x- und y-Werten), als Graph (Schaubild im Koordinatensystem) oder als Gleichung (z. B. y = 2x + 1).'
+      },
+      {
+        type: 'number-input',
+        question: 'Eine Funktion ist durch die Gleichung <strong>y = 3x - 2</strong> gegeben. Berechne den Funktionswert f\u00FCr <strong>x = 4</strong>.',
+        correctAnswer: 10,
+        tolerance: 0.01,
+        label: 'y',
+        placeholder: 'Funktionswert eingeben',
+        explanation: 'Setze x = 4 ein: y = 3 \u00B7 4 - 2 = 12 - 2 = 10.',
+        hint: 'Setze x = 4 in die Gleichung ein: y = 3 \u00B7 4 - 2'
+      }
+    ]
+  },
+
+  // ============================================================
+  // Lektion 2: Funktionsgleichungen
+  // ============================================================
+  {
+    id: 2,
+    title: 'Funktionsgleichungen',
+    explanation: {
+      html: `
+        <div class="book-ref">
+          <div class="book-title">Im Buch nachschlagen</div>
+          <strong>Vorbereitungsblatt Nr. 2:</strong> Funktionsgleichungen<br>
+          <strong>Buch:</strong> S. 72 | <strong>Aufgaben:</strong> S. 72 Nr. 4, A, 5 li., 5 re., 6 li.<br>
+          <strong>Tipp:</strong> Merke und Beispiele auf S. 72 aufmerksam durchlesen!
+        </div>
+
+        <h3>Was ist eine Funktionsgleichung?</h3>
+        <div class="info-box">
+          Eine <strong>Funktionsgleichung</strong> beschreibt den Zusammenhang zwischen x und y
+          als <strong>mathematische Formel</strong>, z. B. <strong>y = 2x + 3</strong>.<br>
+          Mit der Gleichung kannst du fuer <strong>jeden x-Wert</strong> den zugehoerigen y-Wert berechnen.
+        </div>
+
+        <h4>Alltagsbeispiel: Aepfel auf dem Markt</h4>
+        <p>
+          1 kg Aepfel kostet 2,50 Euro. Wie viel kosten 3 kg? Oder 5 kg?<br>
+          Die Funktionsgleichung lautet: <strong>y = 2,5 \u00B7 x</strong> (Preis = 2,50 \u00B7 Menge).<br>
+          Fuer x = 3: y = 2,5 \u00B7 3 = <strong>7,50 Euro</strong>.<br>
+          Fuer x = 5: y = 2,5 \u00B7 5 = <strong>12,50 Euro</strong>.
+        </p>
+
+        <h4>Von der Gleichung zur Wertetabelle</h4>
+        <p>
+          <strong>Schritt 1:</strong> Waehle verschiedene x-Werte (z. B. -2, -1, 0, 1, 2, 3).<br>
+          <strong>Schritt 2:</strong> Setze jeden x-Wert in die Gleichung ein und berechne y.<br>
+          <strong>Schritt 3:</strong> Schreibe die Ergebnisse in eine Tabelle.
+        </p>
+
+        <h4>Von der Wertetabelle zum Graphen</h4>
+        <p>
+          Trage die Punkte aus der Wertetabelle ins Koordinatensystem ein und verbinde sie.
+          Bei einer linearen Funktion (y = mx + b) entsteht immer eine <strong>Gerade</strong>.
+        </p>
+        <p>Hier siehst du die Funktion y = 2x + 1 mit Punkten aus der Wertetabelle:</p>
+        <div id="graph-fgl-table" class="math-graph"></div>
+
+        <div class="warning-box">
+          <strong>Tipp:</strong> Pruefe deine Wertetabelle, indem du einen Punkt im Graphen kontrollierst.
+          Liegt er auf der Geraden? Dann hast du richtig gerechnet!
+        </div>
+
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_1993.JPG" alt="Buch S. 72 - Funktionsgleichungen" style="max-width:100%; margin-top:0.5em;">
+        </details>
+      `,
+      onRender: function () {
+        MathGraph.create('graph-fgl-table', {
+          xRange: [-3, 4],
+          yRange: [-4, 10],
+          lines: [
+            { m: 2, b: 1, color: '#3B82F6', label: 'y = 2x + 1' }
+          ],
+          points: [
+            { x: -2, y: -3, color: '#3B82F6', label: '(-2|-3)' },
+            { x: -1, y: -1, color: '#3B82F6', label: '(-1|-1)' },
+            { x: 0, y: 1, color: '#3B82F6', label: '(0|1)' },
+            { x: 1, y: 3, color: '#3B82F6', label: '(1|3)' },
+            { x: 2, y: 5, color: '#3B82F6', label: '(2|5)' },
+            { x: 3, y: 7, color: '#3B82F6', label: '(3|7)' }
+          ]
+        });
+      }
+    },
+    example: {
+      title: 'Wertetabelle fuer y = 2x + 1 erstellen',
+      steps: [
+        {
+          label: 'Schritt 1: x-Werte waehlen',
+          html: 'Waehle z. B. x = -1, 0, 1, 2, 3.'
+        },
+        {
+          label: 'Schritt 2: y-Werte berechnen',
+          html: `
+            <div class="example-calc">
+              x = -1 -> y = 2 * (-1) + 1 = -2 + 1 = <strong>-1</strong><br>
+              x = 0 -> y = 2 * 0 + 1 = 0 + 1 = <strong>1</strong><br>
+              x = 1 -> y = 2 * 1 + 1 = 2 + 1 = <strong>3</strong><br>
+              x = 2 -> y = 2 * 2 + 1 = 4 + 1 = <strong>5</strong><br>
+              x = 3 -> y = 2 * 3 + 1 = 6 + 1 = <strong>7</strong>
+            </div>
+          `
+        },
+        {
+          label: 'Schritt 3: Punkte eintragen',
+          html: 'Trage die Punkte (-1|-1), (0|1), (1|3), (2|5), (3|7) ins Koordinatensystem ein und verbinde sie zu einer Geraden.'
+        }
+      ]
+    },
+    exercises: [
+      {
+        type: 'fill-table',
+        question: 'F\u00FClle die Wertetabelle f\u00FCr <strong>y = 3x - 1</strong> aus.',
+        xValues: [-1, 0, 1, 2, 3],
+        correctYValues: [-4, -1, 2, 5, 8],
+        givenIndices: [1],
+        explanation: 'Setze jeden x-Wert ein: x = -1 \u2192 y = 3\u00B7(-1) - 1 = -4. x = 1 \u2192 y = 3\u00B71 - 1 = 2. x = 2 \u2192 y = 3\u00B72 - 1 = 5. x = 3 \u2192 y = 3\u00B73 - 1 = 8.',
+        hint: 'Rechne f\u00FCr jeden x-Wert: y = 3 \u00B7 x - 1. Achte auf das Minus!'
+      },
+      {
+        type: 'number-input',
+        question: 'Berechne den Funktionswert von <strong>y = 4x + 2</strong> f\u00FCr <strong>x = 3</strong>.',
+        correctAnswer: 14,
+        tolerance: 0.01,
+        label: 'y',
+        placeholder: 'Funktionswert eingeben',
+        explanation: 'y = 4 \u00B7 3 + 2 = 12 + 2 = 14.',
+        hint: 'Setze x = 3 ein: y = 4 \u00B7 3 + 2'
+      },
+      {
+        type: 'multiple-choice',
+        question: 'Welche Gleichung passt zur Wertetabelle?<br><br>x: 0, 1, 2, 3<br>y: 2, 5, 8, 11',
+        options: ['y = 2x + 3', 'y = 3x + 2', 'y = x + 2', 'y = 5x'],
+        correct: 1,
+        explanation: 'Pr\u00FCfe y = 3x + 2: x = 0 \u2192 y = 2 \u2713, x = 1 \u2192 y = 5 \u2713, x = 2 \u2192 y = 8 \u2713, x = 3 \u2192 y = 11 \u2713. Die Steigung ist 3 (y steigt immer um 3) und der Startwert bei x = 0 ist 2.'
+      },
+      {
+        type: 'matching',
+        question: 'Ordne jeder Gleichung den richtigen Funktionswert f\u00FCr <strong>x = 2</strong> zu.',
+        pairs: [
+          { left: 'y = x + 3', right: 'y = 5' },
+          { left: 'y = 2x', right: 'y = 4' },
+          { left: 'y = 5x', right: 'y = 10' },
+          { left: 'y = 4x + 1', right: 'y = 9' }
+        ]
+      }
+    ]
+  },
+
+  // ============================================================
+  // Lektion 3: Proportionale Funktionen
+  // ============================================================
+  {
+    id: 3,
     title: 'Proportionale Funktionen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 3-5:</strong> Funktionen / Funktionswerte und Proportionale Funktionen<br>
-          <strong>Buch:</strong> S. 75-76 | <strong>Aufgaben:</strong> S. 75/76 Nr. 3, A, B, 4e; S. 76 Nr. 1, 6e<br>
+          <strong>Vorbereitungsblatt Nr. 3:</strong> Steigung. Proportionale Funktion<br>
+          <strong>Buch:</strong> S. 75-76 | <strong>Aufgaben:</strong> S. 75 Nr. 3, A, B, 4re.; S. 76 Nr. 5re., 6re.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 75-76 aufmerksam durchlesen!
         </div>
 
@@ -63,7 +336,11 @@ const LessonsFunktionen = [
           Der Graph geht immer durch (0|0)!
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseiten anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_1994.JPG" alt="Buch S. 75 - Proportionale Funktionen" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_1995.JPG" alt="Buch S. 76 - Proportionale Funktionen" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Statischer Graph: y=2x mit Steigungsdreieck
@@ -179,17 +456,17 @@ const LessonsFunktionen = [
   },
 
   // ============================================================
-  // Lektion 2: Lineare Funktionen
+  // Lektion 4: Lineare Funktionen
   // ============================================================
   {
-    id: 2,
+    id: 4,
     title: 'Lineare Funktionen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 6:</strong> Lineare Funktionen<br>
-          <strong>Buch:</strong> S. 72, S. 79 | <strong>Aufgaben:</strong> S. 79 Nr. 1, A, B, 4e<br>
+          <strong>Vorbereitungsblatt Nr. 4:</strong> Lineare Funktionen<br>
+          <strong>Buch:</strong> S. 79 | <strong>Aufgaben:</strong> S. 79 Nr. 1, A, B, 4li.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 79 aufmerksam durchlesen!
         </div>
 
@@ -237,7 +514,10 @@ const LessonsFunktionen = [
           Aber nicht jede lineare Funktion ist proportional!
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_1996.JPG" alt="Buch S. 79 - Lineare Funktionen" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // y=2x+3 mit y-Achsenabschnitt und Steigungsdreieck
@@ -350,177 +630,17 @@ const LessonsFunktionen = [
   },
 
   // ============================================================
-  // Lektion 3: Steigung und y-Achsenabschnitt bestimmen
+  // Lektion 5: Parallele und senkrechte Geraden
   // ============================================================
   {
-    id: 3,
-    title: 'Steigung und y-Achsenabschnitt bestimmen',
-    explanation: {
-      html: `
-        <div class="book-ref">
-          <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 3 + 6:</strong> Funktionen / Lineare Funktionen (Steigung &amp; y-Achsenabschnitt)<br>
-          <strong>Buch:</strong> S. 72, S. 75-76, S. 79 | <strong>Aufgaben:</strong> S. 76 Nr. 5, 6; S. 79 Nr. 1, 4<br>
-          <strong>Tipp:</strong> Steigungsdreieck auf S. 75 und Beispiele auf S. 79 anschauen!
-        </div>
-
-        <h3>Steigung aus dem Graphen ablesen</h3>
-        <p>
-          Um die Steigung <strong>m</strong> zu bestimmen, brauchst du <strong>zwei Punkte</strong> auf der Geraden.
-          Dann rechnest du mit der <strong>Steigungsformel</strong>:
-        </p>
-        <div class="formula-box">
-          <strong>m = (y2 - y1) / (x2 - x1)</strong><br>
-          "Wie viel steigt/faellt y, wenn x sich aendert?"
-        </div>
-
-        <h4>Beispiel: Steigung berechnen</h4>
-        <p>Gegeben sind P1(1|3) und P2(3|7). Das Steigungsdreieck zeigt: Deltax = 2, Deltay = 4, also m = 4/2 = 2.</p>
-        <div id="graph-l3-formula" class="math-graph"></div>
-
-        <h4>Was bedeutet die Steigung?</h4>
-        <ul>
-          <li><strong>m > 0</strong> -> Gerade <strong>steigt</strong> von links nach rechts (aufwaerts)</li>
-          <li><strong>m < 0</strong> -> Gerade <strong>faellt</strong> von links nach rechts (abwaerts)</li>
-          <li><strong>m = 0</strong> -> <strong>waagerechte</strong> Gerade (z. B. y = 3)</li>
-        </ul>
-
-        <h4>y-Achsenabschnitt b ablesen</h4>
-        <div class="info-box">
-          Der y-Achsenabschnitt <strong>b</strong> ist der y-Wert dort, wo die Gerade die <strong>y-Achse schneidet</strong>
-          (also bei x = 0). Schau dir im folgenden Graphen an, wo die Gerade die y-Achse trifft:
-        </div>
-        <p>Hier y = -1,5x + 4. Lies ab: m = -1,5 (fallend!) und b = 4.</p>
-        <div id="graph-l3-read" class="math-graph"></div>
-
-        <p>
-          Wenn du m und einen Punkt kennst, kannst du b ausrechnen:<br>
-          Setze den Punkt in y = mx + b ein und loese nach b auf: <strong>b = y - m * x</strong>.
-        </p>
-
-        <h4>Probier es selbst: Klicke zwei Punkte!</h4>
-        <p>Klicke zwei Punkte ins Koordinatensystem. Die App berechnet automatisch m und b und zeigt die Gerade:</p>
-        <div id="graph-l3-click" class="math-graph"></div>
-
-        
-      `,
-      onRender: function () {
-        // Gerade y=2x+1 mit Steigungsdreieck und markierten Punkten
-        MathGraph.create('graph-l3-formula', {
-          xRange: [-1, 5],
-          yRange: [-1, 9],
-          lines: [
-            { m: 2, b: 1, color: '#3B82F6', label: 'y = 2x + 1' }
-          ],
-          slopeTriangle: {
-            from: { x: 1, y: 3 },
-            to: { x: 3, y: 7 }
-          },
-          points: [
-            { x: 1, y: 3, color: '#3B82F6', label: 'P1(1|3)' },
-            { x: 3, y: 7, color: '#3B82F6', label: 'P2(3|7)' }
-          ]
-        });
-
-        // Gerade y=-1.5x+4 zum Ablesen
-        MathGraph.create('graph-l3-read', {
-          xRange: [-2, 6],
-          yRange: [-6, 6],
-          lines: [
-            { m: -1.5, b: 4, color: '#EF4444', label: 'y = -1,5x + 4' }
-          ],
-          points: [
-            { x: 0, y: 4, color: '#EF4444', label: 'b = 4' },
-            { x: 2, y: 1, color: '#EF4444', label: '(2|1)' }
-          ],
-          slopeTriangle: {
-            from: { x: 0, y: 4 },
-            to: { x: 2, y: 1 }
-          }
-        });
-
-        // Klickbarer Graph: Zwei Punkte setzen
-        MathGraph.clickable('graph-l3-click', {
-          xRange: [-5, 5],
-          yRange: [-5, 5],
-          mode: 'two-points'
-        });
-      }
-    },
-    example: {
-      title: 'Geradengleichung aus zwei Punkten bestimmen',
-      steps: [
-        {
-          label: 'Gegeben: P1(1|3) und P2(3|7)',
-          html: 'Wir wollen die Gleichung y = mx + b finden.'
-        },
-        {
-          label: 'Schritt 1: Steigung berechnen',
-          html: '<div class="example-calc">m = (y2 - y1) / (x2 - x1) = (7 - 3) / (3 - 1) = 4 / 2 = <strong>2</strong></div>'
-        },
-        {
-          label: 'Schritt 2: b bestimmen',
-          html: '<div class="example-calc">Punkt P1(1|3) einsetzen:<br>3 = 2 * 1 + b<br>3 = 2 + b<br>b = <strong>1</strong></div>'
-        },
-        {
-          label: 'Schritt 3: Gleichung aufstellen',
-          html: 'Die Geradengleichung lautet: <strong>y = 2x + 1</strong>'
-        }
-      ]
-    },
-    exercises: [
-      {
-        type: 'number-input',
-        question: 'Berechne die Steigung <strong>m</strong> der Geraden durch P(2|5) und Q(4|11).',
-        correctAnswer: 3,
-        tolerance: 0.01,
-        label: 'm',
-        placeholder: 'Steigung eingeben',
-        explanation: 'm = (11 - 5) / (4 - 2) = 6 / 2 = 3',
-        hint: 'm = (y\u2082 - y\u2081) / (x\u2082 - x\u2081) = (11 - 5) / (4 - 2)'
-      },
-      {
-        type: 'number-input',
-        question: 'Die Gerade <strong>y = m \u00B7 x + 2</strong> geht durch den Punkt P(3|8). Berechne m.',
-        correctAnswer: 2,
-        tolerance: 0.01,
-        label: 'm',
-        placeholder: 'Steigung eingeben',
-        explanation: 'Einsetzen: 8 = m \u00B7 3 + 2 \u2192 6 = 3m \u2192 m = 2',
-        hint: 'Setze P in die Gleichung ein: 8 = m \u00B7 3 + 2'
-      },
-      {
-        type: 'multiple-choice',
-        question: 'Eine Gerade <strong>f\u00E4llt</strong> von links nach rechts. Was gilt f\u00FCr die Steigung?',
-        options: ['m > 0', 'm = 0', 'm < 0', 'm = 1'],
-        correct: 2,
-        explanation: 'Wenn eine Gerade f\u00E4llt (von links nach rechts abw\u00E4rts geht), ist die Steigung negativ, also m < 0.'
-      },
-      {
-        type: 'number-input',
-        question: 'Berechne die Steigung der Geraden durch A(-1|4) und B(2|-2).',
-        correctAnswer: -2,
-        tolerance: 0.01,
-        label: 'm',
-        placeholder: 'Steigung eingeben',
-        explanation: 'm = (-2 - 4) / (2 - (-1)) = -6 / 3 = -2',
-        hint: 'm = (-2 - 4) / (2 - (-1)) = -6 / 3'
-      }
-    ]
-  },
-
-  // ============================================================
-  // Lektion 4: Parallele und senkrechte Geraden
-  // ============================================================
-  {
-    id: 4,
+    id: 5,
     title: 'Parallele und senkrechte Geraden',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 7:</strong> Parallele und senkrechte Geraden<br>
-          <strong>Buch:</strong> S. 83 | <strong>Aufgaben:</strong> S. 83 Nr. 2, A, B<br>
+          <strong>Vorbereitungsblatt Nr. 5:</strong> Parallele und senkrechte Geraden<br>
+          <strong>Buch:</strong> S. 82-83 | <strong>Aufgaben:</strong> S. 82 Nr. 1; S. 83 Nr. 2, A, B<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 83 aufmerksam durchlesen!
         </div>
 
@@ -572,7 +692,11 @@ const LessonsFunktionen = [
           Beispiel: m = 3/4 -> Kehrwert: 4/3 -> negativ: <strong>-4/3</strong>
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseiten anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_1997.JPG" alt="Buch S. 83 - Parallele und senkrechte Geraden" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_1998.JPG" alt="Buch S. 83 - Beispiele" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Parallele Geraden: gleiche Steigung, verschiedenes b
@@ -683,17 +807,17 @@ const LessonsFunktionen = [
   },
 
   // ============================================================
-  // Lektion 5: Geradengleichung berechnen
+  // Lektion 6: Geradengleichung berechnen
   // ============================================================
   {
-    id: 5,
+    id: 6,
     title: 'Geradengleichung berechnen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 8:</strong> Geradengleichung berechnen<br>
-          <strong>Buch:</strong> S. 85 | <strong>Aufgaben:</strong> S. 85 Nr. 2, 3, A, B<br>
+          <strong>Vorbereitungsblatt Nr. 6:</strong> Geradengleichung berechnen<br>
+          <strong>Buch:</strong> S. 85 | <strong>Aufgaben:</strong> S. 85 Nr. 2, 3, A, B, 4a) re.<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 85 aufmerksam durchlesen!
         </div>
 
@@ -739,7 +863,10 @@ const LessonsFunktionen = [
           Gleichung ein und pruefe, ob die Gleichung stimmt.
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseite anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_1999.JPG" alt="Buch S. 85 - Geradengleichung berechnen" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Beispiel: P(1|5) und Q(3|9) mit y=2x+3
@@ -836,16 +963,16 @@ const LessonsFunktionen = [
   },
 
   // ============================================================
-  // Lektion 6: Modellieren mit linearen Funktionen
+  // Lektion 7: Modellieren
   // ============================================================
   {
-    id: 6,
+    id: 7,
     title: 'Modellieren mit linearen Funktionen',
     explanation: {
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Zeile 9:</strong> Modellieren<br>
+          <strong>Vorbereitungsblatt Nr. 7:</strong> Modellieren<br>
           <strong>Buch:</strong> S. 87 | <strong>Aufgaben:</strong> S. 87 Nr. 2, A<br>
           <strong>Rueckspiegel Lineare Funktionen:</strong> S. 96<br>
           <strong>Tipp:</strong> Merke und Beispiele auf S. 87 durchlesen. Zum Wiederholen den Rueckspiegel S. 96 rechnen!
@@ -900,7 +1027,11 @@ const LessonsFunktionen = [
           Der x-Wert des Schnittpunkts zeigt dir, ab wann sich der andere Tarif lohnt.
         </div>
 
-        
+        <details class="book-pages">
+          <summary>Original-Buchseiten anzeigen</summary>
+          <img src="../Inhalt_Mathebuch/IMG_2001.JPG" alt="Buch S. 87 - Modellieren" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2002.JPG" alt="Buch S. 96 - Rueckspiegel" style="max-width:100%; margin-top:0.5em;">
+        </details>
       `,
       onRender: function () {
         // Taxi-Vergleich: y=2x+3.5 und y=1.5x+5, Schnittpunkt bei x=3, y=9.5

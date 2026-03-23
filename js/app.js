@@ -1,17 +1,18 @@
-// Alle 12 Lektionen mit ID, Titel und Modul-Zuordnung
+// Alle 13 Lektionen mit ID, Titel und Modul-Zuordnung
 const LESSONS = [
-  { id: 1, title: 'Proportionale Funktionen', module: 'm1' },
-  { id: 2, title: 'Lineare Funktionen', module: 'm1' },
-  { id: 3, title: 'Steigung & y-Achsenabschnitt', module: 'm1' },
-  { id: 4, title: 'Parallele & senkrechte Geraden', module: 'm1' },
-  { id: 5, title: 'Geradengleichung berechnen', module: 'm1' },
-  { id: 6, title: 'Modellieren', module: 'm1' },
-  { id: 7, title: 'Gleichungen mit zwei Variablen', module: 'm2' },
-  { id: 8, title: 'Gleichungssysteme grafisch', module: 'm2' },
-  { id: 9, title: 'Gleichsetzungsverfahren', module: 'm2' },
-  { id: 10, title: 'Einsetzungsverfahren', module: 'm2' },
-  { id: 11, title: 'Additionsverfahren', module: 'm2' },
-  { id: 12, title: 'Lösungsvielfalt', module: 'm2' }
+  { id: 1, title: 'Funktionen', module: 'm1' },
+  { id: 2, title: 'Funktionsgleichungen', module: 'm1' },
+  { id: 3, title: 'Proportionale Funktionen', module: 'm1' },
+  { id: 4, title: 'Lineare Funktionen', module: 'm1' },
+  { id: 5, title: 'Parallele & senkrechte Geraden', module: 'm1' },
+  { id: 6, title: 'Geradengleichung berechnen', module: 'm1' },
+  { id: 7, title: 'Modellieren', module: 'm1' },
+  { id: 8, title: 'Gleichungen mit zwei Variablen', module: 'm2' },
+  { id: 9, title: 'Gleichungssysteme grafisch', module: 'm2' },
+  { id: 10, title: 'Gleichsetzungsverfahren', module: 'm2' },
+  { id: 11, title: 'Einsetzungsverfahren', module: 'm2' },
+  { id: 12, title: 'Additionsverfahren', module: 'm2' },
+  { id: 13, title: 'Lösungsvielfalt', module: 'm2' }
 ];
 
 function navigateToLesson(id) {
