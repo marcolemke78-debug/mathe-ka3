@@ -174,7 +174,7 @@ const LessonsFunktionen = [
         <h4>Von der Wertetabelle zum Graphen</h4>
         <p>
           Trage die Punkte aus der Wertetabelle ins Koordinatensystem ein und verbinde sie.
-          Bei einer linearen Funktion (y = mx + b) entsteht immer eine <strong>Gerade</strong>.
+          Bei einer linearen Funktion (y = mx + c) entsteht immer eine <strong>Gerade</strong>.
         </p>
         <p>Hier siehst du die Funktion y = 2x + 1 mit Punkten aus der Wertetabelle:</p>
         <div id="graph-fgl-table" class="math-graph"></div>
@@ -332,7 +332,7 @@ const LessonsFunktionen = [
         <div id="graph-l1-slider" class="math-graph"></div>
 
         <div class="warning-box">
-          <strong>Merke:</strong> Bei proportionalen Funktionen gibt es <strong>keinen y-Achsenabschnitt</strong> (bzw. b = 0).
+          <strong>Merke:</strong> Bei proportionalen Funktionen gibt es <strong>keinen y-Achsenabschnitt</strong> (bzw. c = 0).
           Der Graph geht immer durch (0|0)!
         </div>
 
@@ -421,7 +421,7 @@ const LessonsFunktionen = [
         question: 'Welche Gleichung beschreibt eine <strong>proportionale</strong> Funktion?',
         options: ['y = 3x', 'y = 2x + 1', 'y = x\u00B2 + 3', 'y = 5'],
         correct: 0,
-        explanation: 'Nur y = 3x hat die Form y = m \u00B7 x (ohne b). Die Gerade geht durch den Ursprung. Bei y = 2x + 1 ist b = 1, also nicht proportional.'
+        explanation: 'Nur y = 3x hat die Form y = m \u00B7 x (ohne c). Die Gerade geht durch den Ursprung. Bei y = 2x + 1 ist c = 1, also nicht proportional.'
       },
       {
         type: 'number-input',
@@ -472,22 +472,22 @@ const LessonsFunktionen = [
 
         <h3>Was ist eine lineare Funktion?</h3>
         <div class="formula-box">
-          <strong>y = m * x + b</strong><br>
-          m = Steigung | b = y-Achsenabschnitt
+          <strong>y = m * x + c</strong><br>
+          m = Steigung | c = y-Achsenabschnitt
         </div>
         <p>
           <strong>m (Steigung):</strong> Gibt an, wie steil die Gerade ist - genau wie bei proportionalen Funktionen.
         </p>
         <p>
-          <strong>b (y-Achsenabschnitt):</strong> Das ist der Punkt, an dem die Gerade die <strong>y-Achse schneidet</strong>.
-          Man findet ihn, indem man x = 0 einsetzt: y = m * 0 + b = b.
+          <strong>c (y-Achsenabschnitt):</strong> Das ist der Punkt, an dem die Gerade die <strong>y-Achse schneidet</strong>.
+          Man findet ihn, indem man x = 0 einsetzt: y = m * 0 + c = c.
         </p>
 
         <h4>Alltagsbeispiel: Startguthaben</h4>
         <div class="info-box">
-          Stell dir <strong>b</strong> wie ein <strong>Startguthaben auf deinem Konto</strong> vor.
-          Wenn b = 3, startest du bei 3 Euro - und mit jeder Einheit (x) kommt m Euro dazu (oder wird abgezogen).<br><br>
-          Beispiel: Du hast 3 Euro Taschengeld gespart (b = 3) und bekommst jede Woche 2 Euro dazu (m = 2).
+          Stell dir <strong>c</strong> wie ein <strong>Startguthaben auf deinem Konto</strong> vor.
+          Wenn c = 3, startest du bei 3 Euro - und mit jeder Einheit (x) kommt m Euro dazu (oder wird abgezogen).<br><br>
+          Beispiel: Du hast 3 Euro Taschengeld gespart (c = 3) und bekommst jede Woche 2 Euro dazu (m = 2).
           Nach x Wochen hast du: <strong>y = 2x + 3</strong> Euro.
         </div>
 
@@ -497,20 +497,20 @@ const LessonsFunktionen = [
         <h4>Unterschied zur proportionalen Funktion</h4>
         <ul>
           <li><strong>Proportional:</strong> y = m * x -> geht durch (0|0)</li>
-          <li><strong>Linear:</strong> y = m * x + b -> geht durch (0|b)</li>
+          <li><strong>Linear:</strong> y = m * x + c -> geht durch (0|c)</li>
         </ul>
         <p>
-          Wenn b ungleich 0, wird die Gerade nach oben (b > 0) oder unten (b < 0) verschoben.
+          Wenn c ungleich 0, wird die Gerade nach oben (c > 0) oder unten (c < 0) verschoben.
           Vergleiche y = 2x (durch den Ursprung, blau) mit y = 2x + 3 (um 3 nach oben verschoben, rot):
         </p>
         <div id="graph-l2-compare" class="math-graph"></div>
 
         <h4>Probier es selbst aus!</h4>
-        <p>Verschiebe die Regler fuer m und b und beobachte, wie sich die Gerade veraendert:</p>
+        <p>Verschiebe die Regler fuer m und c und beobachte, wie sich die Gerade veraendert:</p>
         <div id="graph-l2-slider" class="math-graph"></div>
 
         <div class="warning-box">
-          <strong>Achtung:</strong> Jede proportionale Funktion ist auch eine lineare Funktion (mit b = 0).
+          <strong>Achtung:</strong> Jede proportionale Funktion ist auch eine lineare Funktion (mit c = 0).
           Aber nicht jede lineare Funktion ist proportional!
         </div>
 
@@ -532,7 +532,7 @@ const LessonsFunktionen = [
             to: { x: 1, y: 5 }
           },
           points: [
-            { x: 0, y: 3, color: '#EF4444', label: 'b = 3' }
+            { x: 0, y: 3, color: '#EF4444', label: 'c = 3' }
           ]
         });
 
@@ -550,14 +550,14 @@ const LessonsFunktionen = [
           ]
         });
 
-        // Interaktiver Slider: m und b
+        // Interaktiver Slider: m und c
         MathGraph.interactive('graph-l2-slider', {
           xRange: [-5, 5],
           yRange: [-10, 10],
-          equation: 'm*x+b',
+          equation: 'm*x+c',
           sliders: [
             { param: 'm', label: 'Steigung m', min: -4, max: 4, step: 0.5, initial: 2 },
-            { param: 'b', label: 'y-Achsenabschnitt b', min: -5, max: 5, step: 0.5, initial: 1 }
+            { param: 'c', label: 'y-Achsenabschnitt c', min: -5, max: 5, step: 0.5, initial: 1 }
           ],
           showSlopeTriangle: true,
           showEquation: true,
@@ -585,17 +585,17 @@ const LessonsFunktionen = [
         },
         {
           label: 'Schritt 3: Gerade zeichnen',
-          html: 'Verbinde die Punkte mit einer geraden Linie. Die Gerade schneidet die <strong>y-Achse bei b = 3</strong> und hat die <strong>Steigung m = 2</strong>.'
+          html: 'Verbinde die Punkte mit einer geraden Linie. Die Gerade schneidet die <strong>y-Achse bei c = 3</strong> und hat die <strong>Steigung m = 2</strong>.'
         }
       ]
     },
     exercises: [
       {
         type: 'multiple-choice',
-        question: 'Was gibt <strong>b</strong> in der Gleichung y = m \u00B7 x + b an?',
+        question: 'Was gibt <strong>c</strong> in der Gleichung y = m \u00B7 x + c an?',
         options: ['die Steigung', 'den y-Achsenabschnitt', 'den x-Wert', 'die L\u00E4nge der Geraden'],
         correct: 1,
-        explanation: 'b ist der y-Achsenabschnitt \u2013 also der Punkt, an dem die Gerade die y-Achse schneidet. Setzt man x = 0 ein, erh\u00E4lt man y = b.'
+        explanation: 'c ist der y-Achsenabschnitt \u2013 also der Punkt, an dem die Gerade die y-Achse schneidet. Setzt man x = 0 ein, erh\u00E4lt man y = c.'
       },
       {
         type: 'fill-table',
@@ -611,19 +611,19 @@ const LessonsFunktionen = [
         question: 'Bestimme den y-Achsenabschnitt der Funktion <strong>y = 3x - 7</strong>.',
         correctAnswer: -7,
         tolerance: 0.01,
-        label: 'b',
+        label: 'c',
         placeholder: 'y-Achsenabschnitt eingeben',
-        explanation: 'In y = 3x - 7 ist b = -7. Der y-Achsenabschnitt ist die Zahl, die ohne x dasteht.',
-        hint: 'Vergleiche mit y = mx + b. Was ist hier b?'
+        explanation: 'In y = 3x - 7 ist c = -7. Der y-Achsenabschnitt ist die Zahl, die ohne x dasteht.',
+        hint: 'Vergleiche mit y = mx + c. Was ist hier c?'
       },
       {
         type: 'matching',
         question: 'Ordne jeder Gleichung den richtigen y-Achsenabschnitt zu.',
         pairs: [
-          { left: 'y = 2x + 5', right: 'b = 5' },
-          { left: 'y = -3x + 1', right: 'b = 1' },
-          { left: 'y = x - 4', right: 'b = -4' },
-          { left: 'y = 0,5x', right: 'b = 0' }
+          { left: 'y = 2x + 5', right: 'c = 5' },
+          { left: 'y = -3x + 1', right: 'c = 1' },
+          { left: 'y = x - 4', right: 'c = -4' },
+          { left: 'y = 0,5x', right: 'c = 0' }
         ]
       }
     ]
@@ -655,9 +655,9 @@ const LessonsFunktionen = [
         <p>
           Parallele Geraden sind wie <strong>Gleise einer Eisenbahn</strong>:
           Sie laufen immer im gleichen Abstand nebeneinander her und treffen sich nie.
-          Der Abstand zwischen den Gleisen (= Unterschied in b) bleibt immer gleich.
+          Der Abstand zwischen den Gleisen (= Unterschied in c) bleibt immer gleich.
         </p>
-        <p>Hier y = 2x + 1 (blau) und y = 2x - 2 (rot) - gleiche Steigung, verschiedenes b:</p>
+        <p>Hier y = 2x + 1 (blau) und y = 2x - 2 (rot) - gleiche Steigung, verschiedenes c:</p>
         <div id="graph-l4-parallel" class="math-graph"></div>
 
         <h3>Wann sind Geraden senkrecht (orthogonal)?</h3>
@@ -699,7 +699,7 @@ const LessonsFunktionen = [
         </details>
       `,
       onRender: function () {
-        // Parallele Geraden: gleiche Steigung, verschiedenes b
+        // Parallele Geraden: gleiche Steigung, verschiedenes c
         MathGraph.create('graph-l4-parallel', {
           xRange: [-3, 5],
           yRange: [-5, 8],
@@ -719,7 +719,7 @@ const LessonsFunktionen = [
           ]
         });
 
-        // Interaktiver Slider: Erste Gerade fest (m=2, b=1), zweite variabel
+        // Interaktiver Slider: Erste Gerade fest (m=2, c=1), zweite variabel
         MathGraph.interactive('graph-l4-slider', {
           xRange: [-5, 5],
           yRange: [-10, 10],
@@ -825,7 +825,7 @@ const LessonsFunktionen = [
 
         <div class="info-box">
           <strong>Methode 1: Ablesen aus dem Graphen</strong><br>
-          Lies die Steigung m (mit Steigungsdreieck) und den y-Achsenabschnitt b (Schnittpunkt mit y-Achse) direkt ab.
+          Lies die Steigung m (mit Steigungsdreieck) und den y-Achsenabschnitt c (Schnittpunkt mit y-Achse) direkt ab.
           Das ist die schnellste Methode, wenn du einen Graphen hast!
         </div>
 
@@ -835,21 +835,21 @@ const LessonsFunktionen = [
         </div>
         <div class="formula-box">
           <strong>Schritt 1:</strong> m = (y2 - y1) / (x2 - x1)<br>
-          <strong>Schritt 2:</strong> b = y1 - m * x1<br>
-          <strong>Schritt 3:</strong> Gleichung aufstellen: y = mx + b
+          <strong>Schritt 2:</strong> c = y1 - m * x1<br>
+          <strong>Schritt 3:</strong> Gleichung aufstellen: y = mx + c
         </div>
 
         <div class="info-box">
           <strong>Methode 3: Steigung m und ein Punkt gegeben</strong><br>
-          Setze den Punkt in y = mx + b ein und loese nach b auf:
+          Setze den Punkt in y = mx + c ein und loese nach c auf:
         </div>
         <div class="formula-box">
-          <strong>b = y - m * x</strong>
+          <strong>c = y - m * x</strong>
         </div>
 
         <h4>Beispiel: P(1|5) und Q(3|9)</h4>
         <p>
-          m = (9-5) / (3-1) = 4/2 = 2, dann b = 5 - 2*1 = 3.
+          m = (9-5) / (3-1) = 4/2 = 2, dann c = 5 - 2*1 = 3.
           Ergebnis: y = 2x + 3. Im Graphen sieht das so aus:
         </p>
         <div id="graph-l5-example" class="math-graph"></div>
@@ -883,7 +883,7 @@ const LessonsFunktionen = [
           points: [
             { x: 1, y: 5, color: '#3B82F6', label: 'P(1|5)' },
             { x: 3, y: 9, color: '#3B82F6', label: 'Q(3|9)' },
-            { x: 0, y: 3, color: '#EF4444', label: 'b = 3' }
+            { x: 0, y: 3, color: '#EF4444', label: 'c = 3' }
           ]
         });
 
@@ -900,15 +900,15 @@ const LessonsFunktionen = [
       steps: [
         {
           label: 'Gegeben: P(1|5) und Q(3|9)',
-          html: 'Gesucht: Die Gleichung y = mx + b'
+          html: 'Gesucht: Die Gleichung y = mx + c'
         },
         {
           label: 'Schritt 1: Steigung berechnen',
           html: '<div class="example-calc">m = (y\u2082 - y\u2081) / (x\u2082 - x\u2081) = (9 - 5) / (3 - 1) = 4 / 2 = <strong>2</strong></div>'
         },
         {
-          label: 'Schritt 2: b berechnen',
-          html: '<div class="example-calc">b = y\u2081 - m \u00B7 x\u2081 = 5 - 2 \u00B7 1 = 5 - 2 = <strong>3</strong></div>'
+          label: 'Schritt 2: c berechnen',
+          html: '<div class="example-calc">c = y\u2081 - m \u00B7 x\u2081 = 5 - 2 \u00B7 1 = 5 - 2 = <strong>3</strong></div>'
         },
         {
           label: 'Schritt 3: Gleichung aufstellen',
@@ -923,31 +923,31 @@ const LessonsFunktionen = [
     exercises: [
       {
         type: 'coordinate-input',
-        question: 'Bestimme <strong>m</strong> und <strong>b</strong> der Geraden durch P(2|7) und Q(5|16).',
+        question: 'Bestimme <strong>m</strong> und <strong>c</strong> der Geraden durch P(2|7) und Q(5|16).',
         correctX: 3,
         correctY: 1,
         tolerance: 0.01,
         xLabel: 'm',
-        yLabel: 'b',
-        explanation: 'm = (16 - 7) / (5 - 2) = 9 / 3 = 3. Dann b = 7 - 3 \u00B7 2 = 7 - 6 = 1. Also: y = 3x + 1.',
-        hint: 'm = (16 - 7) / (5 - 2) = 3. Dann b = 7 - 3 \u00B7 2 = 1'
+        yLabel: 'c',
+        explanation: 'm = (16 - 7) / (5 - 2) = 9 / 3 = 3. Dann c = 7 - 3 \u00B7 2 = 7 - 6 = 1. Also: y = 3x + 1.',
+        hint: 'm = (16 - 7) / (5 - 2) = 3. Dann c = 7 - 3 \u00B7 2 = 1'
       },
       {
         type: 'number-input',
-        question: 'Eine Gerade hat die Steigung m = -2 und geht durch P(3|1). Berechne <strong>b</strong>.',
+        question: 'Eine Gerade hat die Steigung m = -2 und geht durch P(3|1). Berechne <strong>c</strong>.',
         correctAnswer: 7,
         tolerance: 0.01,
-        label: 'b',
+        label: 'c',
         placeholder: 'y-Achsenabschnitt eingeben',
-        explanation: 'b = y - m \u00B7 x = 1 - (-2) \u00B7 3 = 1 + 6 = 7. Die Gleichung lautet: y = -2x + 7.',
-        hint: 'b = y - m \u00B7 x = 1 - (-2) \u00B7 3 = 1 + 6'
+        explanation: 'c = y - m \u00B7 x = 1 - (-2) \u00B7 3 = 1 + 6 = 7. Die Gleichung lautet: y = -2x + 7.',
+        hint: 'c = y - m \u00B7 x = 1 - (-2) \u00B7 3 = 1 + 6'
       },
       {
         type: 'multiple-choice',
         question: 'Die Gerade geht durch (0|4) und (2|10). Wie lautet die Gleichung?',
         options: ['y = 3x + 4', 'y = 4x + 3', 'y = 2x + 4', 'y = 5x + 4'],
         correct: 0,
-        explanation: 'm = (10 - 4) / (2 - 0) = 6 / 2 = 3. Der Punkt (0|4) verr\u00E4t direkt: b = 4. Also y = 3x + 4.'
+        explanation: 'm = (10 - 4) / (2 - 0) = 6 / 2 = 3. Der Punkt (0|4) verr\u00E4t direkt: c = 4. Also y = 3x + 4.'
       },
       {
         type: 'number-input',
@@ -981,16 +981,16 @@ const LessonsFunktionen = [
         <h3>Alltagsprobleme mit Geraden loesen</h3>
         <p>
           Viele Situationen aus dem Alltag lassen sich mit linearen Funktionen beschreiben.
-          Der Trick: <strong>Uebersetze die Textaufgabe in eine Gleichung y = mx + b</strong>.
+          Der Trick: <strong>Uebersetze die Textaufgabe in eine Gleichung y = mx + c</strong>.
         </p>
 
         <div class="info-box">
-          <strong>So erkennst du m und b im Text:</strong><br>
+          <strong>So erkennst du m und c im Text:</strong><br>
           <ul>
-            <li><strong>b (y-Achsenabschnitt)</strong> = Grundgebuehr, Startwert, Anfangshoehe, Fixkosten</li>
+            <li><strong>c (y-Achsenabschnitt)</strong> = Grundgebuehr, Startwert, Anfangshoehe, Fixkosten</li>
             <li><strong>m (Steigung)</strong> = Preis pro Einheit, Verbrauch pro Stunde, Kosten pro km</li>
           </ul>
-          Denk dran: <strong>b = was du am Anfang schon hast/zahlst</strong>, <strong>m = was pro Schritt dazukommt</strong>.
+          Denk dran: <strong>c = was du am Anfang schon hast/zahlst</strong>, <strong>m = was pro Schritt dazukommt</strong>.
         </div>
 
         <h4>Beispiel 1: Taxi-Vergleich</h4>
@@ -1018,7 +1018,7 @@ const LessonsFunktionen = [
         <div class="formula-box">
           <strong>Vorgehen bei Textaufgaben:</strong><br>
           1. Variable festlegen (Was ist x? Was ist y?)<br>
-          2. Gleichung aufstellen (m und b aus dem Text ablesen)<br>
+          2. Gleichung aufstellen (m und c aus dem Text ablesen)<br>
           3. Berechnen (einsetzen oder gleichsetzen)
         </div>
 
@@ -1090,7 +1090,7 @@ const LessonsFunktionen = [
         question: 'Ein Handyvertrag kostet <strong>10 \u20AC Grundgeb\u00FChr</strong> plus <strong>0,15 \u20AC pro Minute</strong>. Wie lautet die Kostenfunktion?',
         options: ['y = 10x + 0,15', 'y = 0,15x + 10', 'y = 10,15x', 'y = 0,15x - 10'],
         correct: 1,
-        explanation: 'Die Grundgeb\u00FChr (10 \u20AC) ist der feste Startwert \u2192 b = 10. Die Kosten pro Minute (0,15 \u20AC) sind die Steigung \u2192 m = 0,15. Also: y = 0,15x + 10.'
+        explanation: 'Die Grundgeb\u00FChr (10 \u20AC) ist der feste Startwert \u2192 c = 10. Die Kosten pro Minute (0,15 \u20AC) sind die Steigung \u2192 m = 0,15. Also: y = 0,15x + 10.'
       },
       {
         type: 'number-input',
@@ -1119,7 +1119,7 @@ const LessonsFunktionen = [
         question: '<strong>Stromtarif A:</strong> 80 \u20AC Grundgeb\u00FChr + 0,25 \u20AC/kWh.<br><strong>Tarif B:</strong> 0,35 \u20AC/kWh ohne Grundgeb\u00FChr.<br>Was ist die Gleichung f\u00FCr <strong>Tarif A</strong>?',
         options: ['y = 80x + 0,25', 'y = 0,35x', 'y = 0,25x + 80', 'y = 80 - 0,25x'],
         correct: 2,
-        explanation: 'Bei Tarif A sind 80 \u20AC die Grundgeb\u00FChr (= b) und 0,25 \u20AC/kWh die Steigung (= m). Also: y = 0,25x + 80.'
+        explanation: 'Bei Tarif A sind 80 \u20AC die Grundgeb\u00FChr (= c) und 0,25 \u20AC/kWh die Steigung (= m). Also: y = 0,25x + 80.'
       }
     ]
   }

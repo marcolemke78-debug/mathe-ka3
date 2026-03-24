@@ -214,7 +214,7 @@ const LessonsGleichungssysteme = [
 
         <h4>Probier es selbst aus!</h4>
         <p>
-          Verschiebe die Regler, um die Steigungen (m) und y-Achsenabschnitte (b) beider Geraden zu veraendern.
+          Verschiebe die Regler, um die Steigungen (m) und y-Achsenabschnitte (c) beider Geraden zu veraendern.
           Beobachte, wie sich der Schnittpunkt bewegt - und was passiert, wenn die Geraden parallel werden:
         </p>
         <div id="graph-l8-slider" class="math-graph"></div>
@@ -246,14 +246,14 @@ const LessonsGleichungssysteme = [
           xRange: [-6, 6],
           yRange: [-6, 6],
           equations: [
-            { expr: 'm1*x+b1', color: '#3B82F6', label: 'f' },
-            { expr: 'm2*x+b2', color: '#EF4444', label: 'g' }
+            { expr: 'm1*x+c1', color: '#3B82F6', label: 'f' },
+            { expr: 'm2*x+c2', color: '#EF4444', label: 'g' }
           ],
           sliders: [
             { param: 'm1', label: 'Steigung m\u2081', min: -4, max: 4, step: 0.5, initial: 1 },
-            { param: 'b1', label: 'y-Achsenabschnitt b\u2081', min: -5, max: 5, step: 0.5, initial: 1 },
+            { param: 'c1', label: 'y-Achsenabschnitt c\u2081', min: -5, max: 5, step: 0.5, initial: 1 },
             { param: 'm2', label: 'Steigung m\u2082', min: -4, max: 4, step: 0.5, initial: -1 },
-            { param: 'b2', label: 'y-Achsenabschnitt b\u2082', min: -5, max: 5, step: 0.5, initial: 5 }
+            { param: 'c2', label: 'y-Achsenabschnitt c\u2082', min: -5, max: 5, step: 0.5, initial: 5 }
           ],
           showIntersection: true,
           showEquation: true,
@@ -1002,8 +1002,8 @@ const LessonsGleichungssysteme = [
         <div class="formula-box">
           <strong>Erkennung auf einen Blick:</strong><br>
           <strong>Verschiedene Steigungen</strong> -> 1 Loesung (Schnittpunkt)<br>
-          <strong>Gleiche Steigung, verschiedene b</strong> -> keine Loesung (parallel)<br>
-          <strong>Gleiche Steigung und gleiches b</strong> -> unendlich viele (identisch)
+          <strong>Gleiche Steigung, verschiedenes c</strong> -> keine Loesung (parallel)<br>
+          <strong>Gleiche Steigung und gleiches c</strong> -> unendlich viele (identisch)
         </div>
 
         <h4>Fall-Explorer: Probier es selbst aus!</h4>
@@ -1063,11 +1063,11 @@ const LessonsGleichungssysteme = [
           yRange: [-6, 8],
           equations: [
             { expr: '2*x+1', color: '#3B82F6', label: 'f (fest)' },
-            { expr: 'm2*x+b2', color: '#EF4444', label: 'g' }
+            { expr: 'm2*x+c2', color: '#EF4444', label: 'g' }
           ],
           sliders: [
             { param: 'm2', label: 'Steigung m\u2082', min: -4, max: 4, step: 0.5, initial: -1 },
-            { param: 'b2', label: 'y-Achsenabschnitt b\u2082', min: -5, max: 5, step: 0.5, initial: 4 }
+            { param: 'c2', label: 'y-Achsenabschnitt c\u2082', min: -5, max: 5, step: 0.5, initial: 4 }
           ],
           showIntersection: true,
           showEquation: true,
@@ -1096,7 +1096,7 @@ const LessonsGleichungssysteme = [
             <div class="example-calc">
               (1) y = 2x + 1<br>
               (2) y = 2x + 3<br><br>
-              Gleiche Steigung (m = 2), aber verschiedene y-Achsenabschnitte (b = 1 und b = 3).<br>
+              Gleiche Steigung (m = 2), aber verschiedene y-Achsenabschnitte (c = 1 und c = 3).<br>
               -> Die Geraden sind <strong>parallel</strong> -> <strong>keine Loesung</strong>.<br>
               Gleichsetzen: 2x + 1 = 2x + 3 -> 1 = 3 -> <strong>falsch!</strong>
             </div>
@@ -1122,7 +1122,7 @@ const LessonsGleichungssysteme = [
         question: 'Wie viele Lösungen hat das LGS?<br>(1) y = 3x + 1<br>(2) y = 3x + 4',
         options: ['eine Lösung', 'keine Lösung', 'unendlich viele', 'zwei Lösungen'],
         correct: 1,
-        explanation: 'Beide Geraden haben die gleiche Steigung (m = 3), aber verschiedene y-Achsenabschnitte (b = 1 und b = 4). Sie sind parallel und schneiden sich nie → keine Lösung.'
+        explanation: 'Beide Geraden haben die gleiche Steigung (m = 3), aber verschiedene y-Achsenabschnitte (c = 1 und c = 4). Sie sind parallel und schneiden sich nie → keine Lösung.'
       },
       {
         type: 'multiple-choice',
