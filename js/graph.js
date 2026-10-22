@@ -1,5 +1,5 @@
 /**
- * MathGraph – SVG-basierte Graphen-Engine fuer die Mathe-Lern-App
+ * MathGraph – SVG-basierte Graphen-Engine für die Mathe-Lern-App
  *
  * Drei APIs:
  *   MathGraph.create(containerId, config)       – Statischer Graph
@@ -15,12 +15,12 @@ var MathGraph = (function () {
   var SVG_NS = 'http://www.w3.org/2000/svg';
   var VIEW_W = 400;
   var VIEW_H = 400;
-  var PAD = 40; // Padding fuer Achsenbeschriftung
+  var PAD = 40; // Padding für Achsenbeschriftung
 
   var COLORS = {
     line1: '#3B82F6',       // Blau
     line2: '#EF4444',       // Rot
-    intersection: '#10B981', // Gruen
+    intersection: '#10B981', // Grün
     triangle: '#F59E0B',    // Orange
     grid: '#E5E7EB',
     axis: '#1F2937',
@@ -69,7 +69,7 @@ var MathGraph = (function () {
   }
 
   /**
-   * Auf naechste ganze Zahl runden (Grid-Snap)
+   * Auf nächste ganze Zahl runden (Grid-Snap)
    */
   function _snapToGrid(val) {
     return Math.round(val);
@@ -170,8 +170,8 @@ var MathGraph = (function () {
     }));
     // Y-Label
     var yLabel = _svgEl('text', {
-      x: origin.x - 12, y: yTop.y + 6,
-      'font-size': '12', fill: COLORS.axis, 'text-anchor': 'middle'
+      x: origin.x + 8, y: yTop.y + 10,
+      'font-size': '12', fill: COLORS.axis, 'text-anchor': 'start'
     });
     yLabel.textContent = 'y';
     group.appendChild(yLabel);
@@ -292,7 +292,7 @@ var MathGraph = (function () {
     var dx = to.x - from.x;
     var dy = to.y - from.y;
 
-    // Eckpunkt des rechten Winkels (gleiche Hoehe wie from, gleiche x wie to)
+    // Eckpunkt des rechten Winkels (gleiche Höhe wie from, gleiche x wie to)
     var corner = { x: to.x, y: from.y };
 
     var pFrom = _mathToSvg(from.x, from.y, xRange, yRange);
@@ -363,7 +363,7 @@ var MathGraph = (function () {
       stroke: COLORS.intersection, 'stroke-width': 1, 'stroke-dasharray': '4,3', opacity: 0.6
     }));
 
-    // Schnittpunkt-Kreis (groesser und mit Ring)
+    // Schnittpunkt-Kreis (größer und mit Ring)
     group.appendChild(_svgEl('circle', {
       cx: p.x, cy: p.y, r: 6,
       fill: COLORS.intersection, stroke: '#fff', 'stroke-width': 2
@@ -381,7 +381,7 @@ var MathGraph = (function () {
   }
 
   /**
-   * Zahl huebsch formatieren (ganzzahlig wenn moeglich)
+   * Zahl hübsch formatieren (ganzzahlig wenn möglich)
    */
   function _formatNum(n) {
     if (Number.isInteger(n)) return String(n);
@@ -416,7 +416,7 @@ var MathGraph = (function () {
 
   /**
    * Schnittpunkt zweier Geraden berechnen
-   * Gibt null zurueck, wenn parallel oder identisch
+   * Gibt null zurück, wenn parallel oder identisch
    */
   function _computeIntersection(m1, b1, m2, b2) {
     if (Math.abs(m1 - m2) < 1e-10) {
@@ -429,7 +429,7 @@ var MathGraph = (function () {
   }
 
   /**
-   * Pruefen, ob zwei Geraden identisch sind
+   * Prüfen, ob zwei Geraden identisch sind
    */
   function _areLinesIdentical(m1, b1, m2, b2) {
     return Math.abs(m1 - m2) < 1e-10 && Math.abs(b1 - b2) < 1e-10;
@@ -444,7 +444,7 @@ var MathGraph = (function () {
   }
 
   /**
-   * Gerade per Ausdruck zeichnen (fuer interactive)
+   * Gerade per Ausdruck zeichnen (für interactive)
    * Evaluiert die Funktion an vielen Punkten und zeichnet einen Polyline-Pfad
    */
   function _drawExprLine(svg, expr, paramValues, xRange, yRange, color, label) {
@@ -573,7 +573,7 @@ var MathGraph = (function () {
       container.appendChild(eqDisplay);
     }
 
-    // Status-Anzeige (fuer Gleichungssysteme)
+    // Status-Anzeige (für Gleichungssysteme)
     var statusEl = null;
     if (showStatus) {
       statusEl = document.createElement('div');
@@ -637,7 +637,7 @@ var MathGraph = (function () {
       _drawCoordinateSystem(svg, xRange, yRange, gridStep);
 
       var defaultColors = [COLORS.line1, COLORS.line2, COLORS.intersection, COLORS.triangle];
-      var lineParams = []; // {m, b} fuer jede Gleichung
+      var lineParams = []; // {m, b} für jede Gleichung
 
       equations.forEach(function (eq, i) {
         var c = eq.color || defaultColors[i % defaultColors.length];
@@ -653,7 +653,7 @@ var MathGraph = (function () {
         }
       });
 
-      // Steigungsdreieck fuer erste Gleichung
+      // Steigungsdreieck für erste Gleichung
       if (showSlopeTriangle && lineParams.length > 0) {
         var lp = lineParams[0];
         // Dreieck von x=0 nach x=1
@@ -722,7 +722,7 @@ var MathGraph = (function () {
     // Erstes Zeichnen
     redraw();
 
-    // Rueckgabe fuer programmatische Steuerung
+    // Rückgabe für programmatische Steuerung
     return {
       svg: svg,
       redraw: redraw,
@@ -815,7 +815,7 @@ var MathGraph = (function () {
       var snappedX = _snapToGrid(mathCoords.x);
       var snappedY = _snapToGrid(mathCoords.y);
 
-      // Pruefen ob im Bereich
+      // Prüfen ob im Bereich
       if (snappedX < xRange[0] || snappedX > xRange[1] ||
           snappedY < yRange[0] || snappedY > yRange[1]) {
         return;

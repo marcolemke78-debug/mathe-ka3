@@ -14,22 +14,22 @@ const LessonsGleichungssysteme = [
           <strong>Tipp:</strong> Merke und Beispiele auf S. 101 aufmerksam durchlesen!
         </div>
 
-        <h3>Eine Gleichung - unendlich viele Loesungen?</h3>
+        <h3>Eine Gleichung - unendlich viele Lösungen?</h3>
         <div class="info-box">
-          Eine Gleichung wie <strong>2x + y = 10</strong> hat nicht nur eine Loesung,
-          sondern <strong>unendlich viele Loesungspaare (x|y)</strong>.<br>
-          Jedes Loesungspaar ist ein <strong>Punkt auf einer Geraden</strong>.
+          Eine Gleichung wie <strong>2x + y = 10</strong> hat nicht nur eine Lösung,
+          sondern <strong>unendlich viele Lösungspaare (x|y)</strong>.<br>
+          Jedes Lösungspaar ist ein <strong>Punkt auf einer Geraden</strong>.
         </div>
 
-        <h4>Alltagsbeispiel: Das Menue</h4>
+        <h4>Alltagsbeispiel: Das Menü</h4>
         <p>
           Stell dir vor, du hast <strong>10 Euro</strong> und kannst zwei Sachen kaufen:
-          Sache A kostet 2 Euro pro Stueck (das ist das 2x) und Sache B kostet 1 Euro (das ist das y).
-          Die Gleichung <strong>2x + y = 10</strong> beschreibt alle Moeglichkeiten, genau 10 Euro auszugeben.
-          Es gibt nicht nur eine Loesung, sondern viele: 0 von A und 10 von B, 1 von A und 8 von B, usw.
+          Sache A kostet 2 Euro pro Stück (das ist das 2x) und Sache B kostet 1 Euro (das ist das y).
+          Die Gleichung <strong>2x + y = 10</strong> beschreibt alle Möglichkeiten, genau 10 Euro auszugeben.
+          Es gibt nicht nur eine Lösung, sondern viele: 0 von A und 10 von B, 1 von A und 8 von B, usw.
         </p>
 
-        <h4>Wie findet man Loesungspaare?</h4>
+        <h4>Wie findet man Lösungspaare?</h4>
         <p>
           <strong>Schritt 1:</strong> Stelle die Gleichung nach y um.<br>
           Beispiel: 2x + y = 10 -> <strong>y = 10 - 2x</strong> (auch bekannt als y = -2x + 10)
@@ -49,22 +49,22 @@ const LessonsGleichungssysteme = [
 
         <h4>Die Gerade zu 2x + y = 10</h4>
         <p>
-          Hier siehst du die Gerade y = -2x + 10 mit den Loesungspunkten aus der Wertetabelle.
+          Hier siehst du die Gerade y = -2x + 10 mit den Lösungspunkten aus der Wertetabelle.
           Der <strong style="color:#EF4444">rote Punkt (3|5)</strong> liegt <strong>nicht</strong> auf der Geraden -
-          er ist also <strong>keine Loesung</strong> der Gleichung (Probe: 2*3 + 5 = 11, nicht 10).
+          er ist also <strong>keine Lösung</strong> der Gleichung (Probe: 2*3 + 5 = 11, nicht 10).
         </p>
         <div id="graph-l7-solutions" class="math-graph"></div>
 
         <h4>Probier es selbst aus!</h4>
         <p>
           Klicke auf Punkte im Koordinatensystem, um zu testen, ob sie auf der Geraden liegen.
-          Die App rechnet die Probe automatisch fuer dich:
+          Die App rechnet die Probe automatisch für dich:
         </p>
         <div id="graph-l7-click" class="math-graph"></div>
 
         <div class="warning-box">
-          <strong>Merke:</strong> Jeder Punkt auf der Geraden ist eine Loesung der Gleichung.
-          Die Gerade hat unendlich viele Punkte -> unendlich viele Loesungen!
+          <strong>Merke:</strong> Jeder Punkt auf der Geraden ist eine Lösung der Gleichung.
+          Die Gerade hat unendlich viele Punkte -> unendlich viele Lösungen!
         </div>
 
         <details class="book-pages">
@@ -73,7 +73,7 @@ const LessonsGleichungssysteme = [
         </details>
       `,
       onRender: function () {
-        // Statischer Graph: y = -2x + 10 mit Loesungspunkten und einem Nicht-Loesungspunkt
+        // Statischer Graph: y = -2x + 10 mit Lösungspunkten und einem Nicht-Lösungspunkt
         MathGraph.create('graph-l7-solutions', {
           xRange: [-1, 7],
           yRange: [-1, 12],
@@ -100,7 +100,7 @@ const LessonsGleichungssysteme = [
       }
     },
     example: {
-      title: 'Wertetabelle fuer 2x + y = 10',
+      title: 'Wertetabelle für 2x + y = 10',
       steps: [
         {
           label: 'Schritt 1: Nach y umstellen',
@@ -125,7 +125,7 @@ const LessonsGleichungssysteme = [
         },
         {
           label: 'Schritt 4: Gerade zeichnen',
-          html: 'Verbinde die Punkte zu einer Geraden. <strong>Alle Punkte auf dieser Geraden</strong> sind Loesungen der Gleichung.'
+          html: 'Verbinde die Punkte zu einer Geraden. <strong>Alle Punkte auf dieser Geraden</strong> sind Lösungen der Gleichung.'
         }
       ]
     },
@@ -168,7 +168,7 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 9: Gleichungssysteme grafisch loesen
+  // Lektion 9: Gleichungssysteme grafisch lösen
   // ============================================================
   {
     id: 9,
@@ -186,27 +186,27 @@ const LessonsGleichungssysteme = [
         <div class="info-box">
           Ein <strong>lineares Gleichungssystem</strong> besteht aus <strong>2 Gleichungen
           mit 2 Variablen</strong> (x und y).<br>
-          Gesucht ist das Zahlenpaar (x|y), das <strong>beide</strong> Gleichungen gleichzeitig erfuellt.
+          Gesucht ist das Zahlenpaar (x|y), das <strong>beide</strong> Gleichungen gleichzeitig erfüllt.
         </div>
 
         <h4>Alltagsbeispiel: Zwei Freunde laufen aufeinander zu</h4>
         <p>
-          Stell dir zwei Freunde vor, die sich bewegen. Einer startet links unten und laeuft nach rechts oben (Gerade 1),
-          der andere startet rechts oben und laeuft nach links unten (Gerade 2).
-          Der <strong>Treffpunkt</strong> ist die Loesung - dort sind beide gleichzeitig am selben Ort.
+          Stell dir zwei Freunde vor, die sich bewegen. Einer startet links unten und läuft nach rechts oben (Gerade 1),
+          der andere startet rechts oben und läuft nach links unten (Gerade 2).
+          Der <strong>Treffpunkt</strong> ist die Lösung - dort sind beide gleichzeitig am selben Ort.
           Im Koordinatensystem ist das der <strong>Schnittpunkt</strong> beider Geraden.
         </p>
 
         <h4>Beispiel: y = x + 1 und y = -x + 5</h4>
         <p>
-          Die blaue Gerade steigt (m = 1), die rote faellt (m = -1).
-          Sie treffen sich im gruenen Punkt <strong>S(2|3)</strong> - das ist die Loesung des LGS:
+          Die blaue Gerade steigt (m = 1), die rote fällt (m = -1).
+          Sie treffen sich im grünen Punkt <strong>S(2|3)</strong> - das ist die Lösung des LGS:
         </p>
         <div id="graph-l8-example" class="math-graph"></div>
 
         <div class="formula-box">
-          <strong>Vorgehen (grafische Loesung):</strong><br>
-          1. Fuer jede Gleichung eine Wertetabelle erstellen<br>
+          <strong>Vorgehen (grafische Lösung):</strong><br>
+          1. Für jede Gleichung eine Wertetabelle erstellen<br>
           2. Beide Geraden ins Koordinatensystem zeichnen<br>
           3. Schnittpunkt ablesen<br>
           4. Probe: Schnittpunkt in <strong>beide</strong> Gleichungen einsetzen
@@ -214,7 +214,7 @@ const LessonsGleichungssysteme = [
 
         <h4>Probier es selbst aus!</h4>
         <p>
-          Verschiebe die Regler, um die Steigungen (m) und y-Achsenabschnitte (c) beider Geraden zu veraendern.
+          Verschiebe die Regler, um die Steigungen (m) und y-Achsenabschnitte (c) beider Geraden zu verändern.
           Beobachte, wie sich der Schnittpunkt bewegt - und was passiert, wenn die Geraden parallel werden:
         </p>
         <div id="graph-l8-slider" class="math-graph"></div>
@@ -226,7 +226,7 @@ const LessonsGleichungssysteme = [
 
         <details class="book-pages">
           <summary>Original-Buchseite anzeigen</summary>
-          <img src="../Inhalt_Mathebuch/IMG_2004.JPG" alt="Buch S. 103 - LGS grafisch loesen" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2004.JPG" alt="Buch S. 103 - LGS grafisch lösen" style="max-width:100%; margin-top:0.5em;">
         </details>
       `,
       onRender: function () {
@@ -241,7 +241,7 @@ const LessonsGleichungssysteme = [
           intersection: { x: 2, y: 3 }
         });
 
-        // Interaktiver Slider: 4 Parameter fuer 2 Geraden
+        // Interaktiver Slider: 4 Parameter für 2 Geraden
         MathGraph.interactive('graph-l8-slider', {
           xRange: [-6, 6],
           yRange: [-6, 6],
@@ -262,7 +262,7 @@ const LessonsGleichungssysteme = [
       }
     },
     example: {
-      title: 'Grafische Loesung: y = x + 1 und y = -x + 5',
+      title: 'Grafische Lösung: y = x + 1 und y = -x + 5',
       steps: [
         {
           label: 'Schritt 1: Wertetabellen erstellen',
@@ -290,7 +290,7 @@ const LessonsGleichungssysteme = [
               In (1): y = x + 1 -> 3 = 2 + 1 = 3 <strong>stimmt!</strong><br>
               In (2): y = -x + 5 -> 3 = -2 + 5 = 3 <strong>stimmt!</strong>
             </div>
-            <strong>Die Loesung (2|3) ist korrekt!</strong>
+            <strong>Die Lösung (2|3) ist korrekt!</strong>
           `
         }
       ]
@@ -357,31 +357,31 @@ const LessonsGleichungssysteme = [
 
         <h3>Beide Seiten gleichsetzen</h3>
         <div class="info-box">
-          Wenn beide Gleichungen nach <strong>y</strong> (oder x) aufgeloest sind,
+          Wenn beide Gleichungen nach <strong>y</strong> (oder x) aufgelöst sind,
           kannst du die rechten Seiten einfach <strong>gleichsetzen</strong>.
-          Das funktioniert, weil beide rechten Seiten gleich y sind - also muessen sie auch gleich sein!
+          Das funktioniert, weil beide rechten Seiten gleich y sind - also müssen sie auch gleich sein!
         </div>
 
         <h4>Alltagsbeispiel: Wann gleich teuer?</h4>
         <p>
           Stell dir zwei Handytarife vor:<br>
           <strong>Tarif A:</strong> y = 3x - 2 (z.B. 3 Cent pro Minute, 2 Euro Startguthaben abgezogen)<br>
-          <strong>Tarif B:</strong> y = -x + 6 (z.B. 1 Cent Rabatt pro Minute, 6 Euro Grundgebuehr)<br>
+          <strong>Tarif B:</strong> y = -x + 6 (z.B. 1 Cent Rabatt pro Minute, 6 Euro Grundgebühr)<br>
           Die Frage "Ab wann kosten beide gleich viel?" bedeutet: Wann ist <strong>3x - 2 = -x + 6</strong>?
         </p>
 
         <h4>Grafische Darstellung</h4>
         <p>
-          Im Graphen siehst du die beiden Geraden. Der Schnittpunkt <strong>S(2|4)</strong> ist die Loesung,
+          Im Graphen siehst du die beiden Geraden. Der Schnittpunkt <strong>S(2|4)</strong> ist die Lösung,
           die wir mit dem Gleichsetzungsverfahren berechnen:
         </p>
         <div id="graph-l9-example" class="math-graph"></div>
 
-        <h4>Das Verfahren Schritt fuer Schritt</h4>
+        <h4>Das Verfahren Schritt für Schritt</h4>
         <p>Beispiel: (1) <span class="highlight-blue">y = 3x - 2</span> und (2) <span class="highlight-red">y = -x + 6</span></p>
 
         <div class="algebra-step">
-          Beide sind nach y aufgeloest, also rechte Seiten gleichsetzen:
+          Beide sind nach y aufgelöst, also rechte Seiten gleichsetzen:
         </div>
         <div class="algebra-step">
           <span class="highlight-blue">3x - 2</span> = <span class="highlight-red">-x + 6</span>
@@ -402,22 +402,22 @@ const LessonsGleichungssysteme = [
           x = 2 in (1) einsetzen: y = 3*2 - 2 = <strong>4</strong>
         </div>
         <div class="algebra-step">
-          <span class="highlight-green">Loesung: (2|4)</span>
+          <span class="highlight-green">Lösung: (2|4)</span>
         </div>
 
         <div class="formula-box">
           <strong>Schritte beim Gleichsetzungsverfahren:</strong><br>
           1. Beide Gleichungen nach y (oder x) umstellen<br>
           2. Die rechten Seiten gleichsetzen<br>
-          3. Nach der verbleibenden Variable aufloesen<br>
+          3. Nach der verbleibenden Variable auflösen<br>
           4. Den Wert in eine Gleichung einsetzen -> zweite Variable berechnen<br>
           5. <strong>Probe machen!</strong>
         </div>
 
         <div class="warning-box">
           <strong>Wann benutzt man dieses Verfahren?</strong><br>
-          Am besten, wenn <strong>beide Gleichungen schon nach y (oder x) aufgeloest</strong> sind.
-          Dann kann man direkt gleichsetzen, ohne vorher umstellen zu muessen.
+          Am besten, wenn <strong>beide Gleichungen schon nach y (oder x) aufgelöst</strong> sind.
+          Dann kann man direkt gleichsetzen, ohne vorher umstellen zu müssen.
         </div>
 
         <details class="book-pages">
@@ -444,12 +444,12 @@ const LessonsGleichungssysteme = [
         {
           label: 'Schritt 1: Gleichsetzen',
           html: `
-            Beide Gleichungen sind nach y aufgeloest -> rechte Seiten gleichsetzen:
+            Beide Gleichungen sind nach y aufgelöst -> rechte Seiten gleichsetzen:
             <div class="example-calc">3x - 2 = -x + 6</div>
           `
         },
         {
-          label: 'Schritt 2: Nach x aufloesen',
+          label: 'Schritt 2: Nach x auflösen',
           html: `
             <div class="example-calc">
               3x - 2 = -x + 6 &nbsp;&nbsp;| +x<br>
@@ -472,7 +472,7 @@ const LessonsGleichungssysteme = [
             <div class="example-calc">
               y = -x + 6 -> -2 + 6 = 4 stimmt!
             </div>
-            <strong>Loesung: (2|4)</strong>
+            <strong>Lösung: (2|4)</strong>
           `
         }
       ]
@@ -550,9 +550,9 @@ const LessonsGleichungssysteme = [
 
         <h4>Alltagsbeispiel: Das Puzzle</h4>
         <p>
-          Stell dir vor, du weisst: <strong>"y ist gleich 7 minus x"</strong> (aus Gleichung 1).
-          Dann kannst du ueberall, wo in Gleichung 2 ein "y" steht, einfach <strong>"7 - x"</strong> hinschreiben.
-          Wie bei einem Puzzle: Du setzt ein Stueck ins andere ein.
+          Stell dir vor, du weißt: <strong>"y ist gleich 7 minus x"</strong> (aus Gleichung 1).
+          Dann kannst du überall, wo in Gleichung 2 ein "y" steht, einfach <strong>"7 - x"</strong> hinschreiben.
+          Wie bei einem Puzzle: Du setzt ein Stück ins andere ein.
         </p>
 
         <h4>Grafische Darstellung</h4>
@@ -562,7 +562,7 @@ const LessonsGleichungssysteme = [
         </p>
         <div id="graph-l10-example" class="math-graph"></div>
 
-        <h4>Das Verfahren Schritt fuer Schritt</h4>
+        <h4>Das Verfahren Schritt für Schritt</h4>
         <p>Beispiel: (1) <span class="highlight-blue">x + y = 7</span> und (2) <span class="highlight-red">2x - y = 5</span></p>
 
         <div class="algebra-step">
@@ -573,15 +573,15 @@ const LessonsGleichungssysteme = [
         </div>
 
         <div class="algebra-step" style="margin-top: 0.5em;">
-          <strong>Schritt 2:</strong> In Gleichung (2) fuer y einsetzen:
+          <strong>Schritt 2:</strong> In Gleichung (2) für y einsetzen:
         </div>
         <div class="algebra-step">
           2x - <span class="highlight-blue">(7 - x)</span> = 5
         </div>
 
         <div class="algebra-step" style="margin-top: 0.5em; padding: 0.5em; background: #FEF3C7; border-radius: 6px;">
-          <strong style="color: #D97706;">Achtung - Klammer aufloesen!</strong><br>
-          Das Minus vor der Klammer aendert die Vorzeichen <strong>aller</strong> Terme in der Klammer:<br>
+          <strong style="color: #D97706;">Achtung - Klammer auflösen!</strong><br>
+          Das Minus vor der Klammer ändert die Vorzeichen <strong>aller</strong> Terme in der Klammer:<br>
           -(7 - x) = <strong>-7 + x</strong>
         </div>
 
@@ -604,20 +604,20 @@ const LessonsGleichungssysteme = [
           x = 4 in <span class="highlight-blue">y = 7 - x</span> einsetzen: y = 7 - 4 = <strong>3</strong>
         </div>
         <div class="algebra-step">
-          <span class="highlight-green">Loesung: (4|3)</span>
+          <span class="highlight-green">Lösung: (4|3)</span>
         </div>
 
         <div class="formula-box">
           <strong>Schritte beim Einsetzungsverfahren:</strong><br>
           1. Eine Gleichung nach einer Variable umstellen<br>
           2. Den Ausdruck in die <strong>andere</strong> Gleichung einsetzen<br>
-          3. Die entstehende Gleichung aufloesen<br>
-          4. Zweite Variable berechnen (Wert zurueckeinsetzen)<br>
+          3. Die entstehende Gleichung auflösen<br>
+          4. Zweite Variable berechnen (Wert zurückeinsetzen)<br>
           5. <strong>Probe machen!</strong>
         </div>
 
         <div class="warning-box">
-          <strong>Haeufiger Fehler:</strong> Vergiss nicht, die <strong>Klammer richtig aufzuloesen</strong>,
+          <strong>Häufiger Fehler:</strong> Vergiss nicht, die <strong>Klammer richtig aufzulösen</strong>,
           wenn du den Ausdruck einsetzt! Besonders bei <strong>Minus vor der Klammer</strong> aufpassen:
           -(a - b) = -a + b, nicht -a - b!
         </div>
@@ -658,7 +658,7 @@ const LessonsGleichungssysteme = [
           `
         },
         {
-          label: 'Schritt 3: Nach x aufloesen',
+          label: 'Schritt 3: Nach x auflösen',
           html: `
             <div class="example-calc">
               2x - 7 + x = 5<br>
@@ -675,7 +675,7 @@ const LessonsGleichungssysteme = [
               y = 7 - x = 7 - 4 = <strong>3</strong><br><br>
               Probe in (2): 2*4 - 3 = 8 - 3 = 5 stimmt!
             </div>
-            <strong>Loesung: (4|3)</strong>
+            <strong>Lösung: (4|3)</strong>
           `
         }
       ]
@@ -747,7 +747,7 @@ const LessonsGleichungssysteme = [
         <h3>Gleichungen addieren oder subtrahieren</h3>
         <div class="info-box">
           Beim Additionsverfahren werden die beiden Gleichungen so <strong>addiert oder subtrahiert</strong>,
-          dass eine Variable <strong>wegfaellt</strong>.
+          dass eine Variable <strong>wegfällt</strong>.
           Das funktioniert, weil man auf beiden Seiten einer Gleichung das Gleiche machen darf.
         </div>
 
@@ -771,15 +771,15 @@ const LessonsGleichungssysteme = [
           <li><strong>Gleiche Vorzeichen</strong> vor einer Variable (z. B. +3x und +3x) -> <strong>subtrahieren</strong></li>
         </ul>
 
-        <h4>Das Verfahren Schritt fuer Schritt</h4>
+        <h4>Das Verfahren Schritt für Schritt</h4>
         <p>Beispiel: (1) <span class="highlight-blue">3x + 2y = 16</span> und (2) <span class="highlight-red">3x - 2y = 8</span></p>
 
         <div class="algebra-step">
-          <strong>Schritt 1:</strong> Pruefen: <span class="highlight-blue">+2y</span> und <span class="highlight-red">-2y</span> haben verschiedene Vorzeichen -> <strong>addieren!</strong>
+          <strong>Schritt 1:</strong> Prüfen: <span class="highlight-blue">+2y</span> und <span class="highlight-red">-2y</span> haben verschiedene Vorzeichen -> <strong>addieren!</strong>
         </div>
 
         <div class="algebra-step" style="margin-top: 0.5em;">
-          <strong>Schritt 2:</strong> Gleichungen uebereinander schreiben und addieren:
+          <strong>Schritt 2:</strong> Gleichungen übereinander schreiben und addieren:
         </div>
         <div class="algebra-step" style="border-left: 3px solid #3B82F6; padding-left: 1em;">
           &nbsp;&nbsp;3x + <span class="highlight-blue">2y</span> = 16
@@ -795,7 +795,7 @@ const LessonsGleichungssysteme = [
         </div>
 
         <div class="algebra-step" style="margin-top: 0.5em;">
-          Das <strong>2y faellt weg</strong>, weil +2y + (-2y) = 0!
+          Das <strong>2y fällt weg</strong>, weil +2y + (-2y) = 0!
         </div>
 
         <div class="algebra-arrow">:6</div>
@@ -806,7 +806,7 @@ const LessonsGleichungssysteme = [
           x = 4 in (1): 3*4 + 2y = 16 -> 12 + 2y = 16 -> 2y = 4 -> <strong>y = 2</strong>
         </div>
         <div class="algebra-step">
-          <span class="highlight-green">Loesung: (4|2)</span>
+          <span class="highlight-green">Lösung: (4|2)</span>
         </div>
 
         <h4>Was wenn die Koeffizienten nicht passen?</h4>
@@ -820,7 +820,7 @@ const LessonsGleichungssysteme = [
 
         <div class="formula-box">
           <strong>Schritte beim Additionsverfahren:</strong><br>
-          1. Gleichungen so vorbereiten, dass eine Variable bei Addition/Subtraktion wegfaellt
+          1. Gleichungen so vorbereiten, dass eine Variable bei Addition/Subtraktion wegfällt
              (ggf. mit einem Faktor multiplizieren)<br>
           2. Gleichungen addieren oder subtrahieren<br>
           3. Verbleibende Variable ausrechnen<br>
@@ -856,7 +856,7 @@ const LessonsGleichungssysteme = [
       title: 'Additionsverfahren: 3x + 2y = 16 und 3x - 2y = 8',
       steps: [
         {
-          label: 'Schritt 1: Vorbereitung pruefen',
+          label: 'Schritt 1: Vorbereitung prüfen',
           html: `
             Die y-Koeffizienten sind <strong>+2</strong> und <strong>-2</strong> -> verschiedene Vorzeichen -> <strong>addieren!</strong>
           `
@@ -870,11 +870,11 @@ const LessonsGleichungssysteme = [
               ________________________<br>
               &nbsp;&nbsp;6x &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 24
             </div>
-            Das <strong>2y faellt weg</strong>, weil +2y + (-2y) = 0.
+            Das <strong>2y fällt weg</strong>, weil +2y + (-2y) = 0.
           `
         },
         {
-          label: 'Schritt 3: Nach x aufloesen',
+          label: 'Schritt 3: Nach x auflösen',
           html: '<div class="example-calc">6x = 24 -> <strong>x = 4</strong></div>'
         },
         {
@@ -887,7 +887,7 @@ const LessonsGleichungssysteme = [
               2y = 4 -> <strong>y = 2</strong><br><br>
               Probe in (2): 3*4 - 2*2 = 12 - 4 = 8 stimmt!
             </div>
-            <strong>Loesung: (4|2)</strong>
+            <strong>Lösung: (4|2)</strong>
           `
         }
       ]
@@ -942,7 +942,7 @@ const LessonsGleichungssysteme = [
   },
 
   // ============================================================
-  // Lektion 13: Loesungsvielfalt
+  // Lektion 13: Lösungsvielfalt
   // ============================================================
   {
     id: 13,
@@ -951,28 +951,28 @@ const LessonsGleichungssysteme = [
       html: `
         <div class="book-ref">
           <div class="book-title">Im Buch nachschlagen</div>
-          <strong>Vorbereitungsblatt Nr. 6 (LGS):</strong> Loesungsvielfalt<br>
+          <strong>Vorbereitungsblatt Nr. 6 (LGS):</strong> Lösungsvielfalt<br>
           <strong>Buch:</strong> S. 112-113 | <strong>Aufgaben:</strong> S. 112 Nr. 2; S. 113 Nr. 3, A<br>
-          <strong>Rueckspiegel Gleichungssysteme:</strong> S. 120<br>
-          <strong>Tipp:</strong> Merke auf S. 112 lesen. Zum Wiederholen den Rueckspiegel S. 120 rechnen!
+          <strong>Rückspiegel Gleichungssysteme:</strong> S. 120<br>
+          <strong>Tipp:</strong> Merke auf S. 112 lesen. Zum Wiederholen den Rückspiegel S. 120 rechnen!
         </div>
 
-        <h3>Wie viele Loesungen kann ein LGS haben?</h3>
+        <h3>Wie viele Lösungen kann ein LGS haben?</h3>
         <div class="info-box">
-          Ein lineares Gleichungssystem kann <strong>drei verschiedene Faelle</strong> haben:
-          genau eine Loesung, keine Loesung, oder unendlich viele Loesungen.
+          Ein lineares Gleichungssystem kann <strong>drei verschiedene Fälle</strong> haben:
+          genau eine Lösung, keine Lösung, oder unendlich viele Lösungen.
           Welcher Fall vorliegt, erkennst du an den <strong>Steigungen und y-Achsenabschnitten</strong> beider Geraden.
         </div>
 
-        <h4>Die drei Faelle im Ueberblick</h4>
+        <h4>Die drei Fälle im Überblick</h4>
         <div class="graph-triple">
           <div>
             <div id="graph-l12-one" class="math-graph"></div>
-            <div class="graph-triple-label">1 Loesung</div>
+            <div class="graph-triple-label">1 Lösung</div>
           </div>
           <div>
             <div id="graph-l12-none" class="math-graph"></div>
-            <div class="graph-triple-label">Keine Loesung</div>
+            <div class="graph-triple-label">Keine Lösung</div>
           </div>
           <div>
             <div id="graph-l12-infinite" class="math-graph"></div>
@@ -980,20 +980,20 @@ const LessonsGleichungssysteme = [
           </div>
         </div>
 
-        <h4>Fall 1: Genau eine Loesung</h4>
+        <h4>Fall 1: Genau eine Lösung</h4>
         <p>
           Die Geraden haben <strong>verschiedene Steigungen</strong> -> sie schneiden sich in <strong>genau einem Punkt</strong>.<br>
-          Beim Rechnen kommt ein konkreter Wert fuer x (und y) heraus.
+          Beim Rechnen kommt ein konkreter Wert für x (und y) heraus.
           Das ist der <strong>Normalfall</strong>.
         </p>
 
-        <h4>Fall 2: Keine Loesung</h4>
+        <h4>Fall 2: Keine Lösung</h4>
         <p>
           Die Geraden sind <strong>parallel</strong> - gleiche Steigung, aber <strong>verschiedener</strong> y-Achsenabschnitt.<br>
           Beim Rechnen kommt eine <strong>falsche Aussage</strong> heraus, z. B. <strong>0 = 5</strong> - das stimmt nie!
         </p>
 
-        <h4>Fall 3: Unendlich viele Loesungen</h4>
+        <h4>Fall 3: Unendlich viele Lösungen</h4>
         <p>
           Die Geraden sind <strong>identisch</strong> - gleiche Steigung <strong>und</strong> gleicher y-Achsenabschnitt.<br>
           Beim Rechnen kommt eine <strong>wahre Aussage</strong> heraus, z. B. <strong>0 = 0</strong> - das stimmt immer!
@@ -1001,8 +1001,8 @@ const LessonsGleichungssysteme = [
 
         <div class="formula-box">
           <strong>Erkennung auf einen Blick:</strong><br>
-          <strong>Verschiedene Steigungen</strong> -> 1 Loesung (Schnittpunkt)<br>
-          <strong>Gleiche Steigung, verschiedenes c</strong> -> keine Loesung (parallel)<br>
+          <strong>Verschiedene Steigungen</strong> -> 1 Lösung (Schnittpunkt)<br>
+          <strong>Gleiche Steigung, verschiedenes c</strong> -> keine Lösung (parallel)<br>
           <strong>Gleiche Steigung und gleiches c</strong> -> unendlich viele (identisch)
         </div>
 
@@ -1019,14 +1019,14 @@ const LessonsGleichungssysteme = [
 
         <details class="book-pages">
           <summary>Original-Buchseiten anzeigen</summary>
-          <img src="../Inhalt_Mathebuch/IMG_2009.JPG" alt="Buch S. 112 - Loesungsvielfalt" style="max-width:100%; margin-top:0.5em;">
-          <img src="../Inhalt_Mathebuch/IMG_2010.JPG" alt="Buch S. 113 - Loesungsvielfalt" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2009.JPG" alt="Buch S. 112 - Lösungsvielfalt" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2010.JPG" alt="Buch S. 113 - Lösungsvielfalt" style="max-width:100%; margin-top:0.5em;">
         </details>
       `,
       onRender: function () {
         // Drei statische Graphen nebeneinander
 
-        // Fall 1: Eine Loesung - y = 2x + 1 und y = -x + 4, Schnittpunkt (1, 3)
+        // Fall 1: Eine Lösung - y = 2x + 1 und y = -x + 4, Schnittpunkt (1, 3)
         MathGraph.create('graph-l12-one', {
           xRange: [-2, 5],
           yRange: [-2, 7],
@@ -1037,7 +1037,7 @@ const LessonsGleichungssysteme = [
           intersection: { x: 1, y: 3 }
         });
 
-        // Fall 2: Keine Loesung - y = 2x + 1 und y = 2x - 2 (parallel)
+        // Fall 2: Keine Lösung - y = 2x + 1 und y = 2x - 2 (parallel)
         MathGraph.create('graph-l12-none', {
           xRange: [-2, 5],
           yRange: [-4, 7],
@@ -1076,40 +1076,40 @@ const LessonsGleichungssysteme = [
       }
     },
     example: {
-      title: 'Die drei Faelle im Ueberblick',
+      title: 'Die drei Fälle im Überblick',
       steps: [
         {
-          label: 'Fall 1: Eine Loesung',
+          label: 'Fall 1: Eine Lösung',
           html: `
             <div class="example-calc">
               (1) y = 2x + 1<br>
               (2) y = -x + 4<br><br>
               Verschiedene Steigungen (2 und -1) -> <strong>ein Schnittpunkt</strong>.<br>
               Gleichsetzen: 2x + 1 = -x + 4 -> 3x = 3 -> x = 1, y = 3.<br>
-              Loesung: <strong>(1|3)</strong>
+              Lösung: <strong>(1|3)</strong>
             </div>
           `
         },
         {
-          label: 'Fall 2: Keine Loesung',
+          label: 'Fall 2: Keine Lösung',
           html: `
             <div class="example-calc">
               (1) y = 2x + 1<br>
               (2) y = 2x + 3<br><br>
               Gleiche Steigung (m = 2), aber verschiedene y-Achsenabschnitte (c = 1 und c = 3).<br>
-              -> Die Geraden sind <strong>parallel</strong> -> <strong>keine Loesung</strong>.<br>
+              -> Die Geraden sind <strong>parallel</strong> -> <strong>keine Lösung</strong>.<br>
               Gleichsetzen: 2x + 1 = 2x + 3 -> 1 = 3 -> <strong>falsch!</strong>
             </div>
           `
         },
         {
-          label: 'Fall 3: Unendlich viele Loesungen',
+          label: 'Fall 3: Unendlich viele Lösungen',
           html: `
             <div class="example-calc">
               (1) y = 2x + 1<br>
               (2) 2y = 4x + 2<br><br>
               Gleichung (2) vereinfachen: y = 2x + 1 -> <strong>identisch mit (1)!</strong><br>
-              -> Die Geraden liegen aufeinander -> <strong>unendlich viele Loesungen</strong>.<br>
+              -> Die Geraden liegen aufeinander -> <strong>unendlich viele Lösungen</strong>.<br>
               Gleichsetzen: 2x + 1 = 2x + 1 -> 0 = 0 -> <strong>immer wahr!</strong>
             </div>
           `

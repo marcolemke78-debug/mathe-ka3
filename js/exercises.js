@@ -123,7 +123,7 @@ const Exercises = {
       }
 
       var tolerance = exercise.tolerance !== undefined ? exercise.tolerance : 0.01;
-      // Auch Brueche akzeptieren: z.B. "1/2" oder "-3/4"
+      // Auch Brüche akzeptieren: z.B. "1/2" oder "-3/4"
       if (userVal.includes('/')) {
         var parts = userVal.split('/');
         if (parts.length === 2) {
@@ -152,7 +152,7 @@ const Exercises = {
       }
     });
 
-    // Enter-Taste zum Pruefen
+    // Enter-Taste zum Prüfen
     inputField.addEventListener('keydown', function(e) {
       if (e.key === 'Enter') checkBtn.click();
     });
@@ -262,7 +262,7 @@ const Exercises = {
       }
     });
 
-    // Enter zum Pruefen
+    // Enter zum Prüfen
     xInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') checkBtn.click(); });
     yInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') checkBtn.click(); });
 
@@ -271,7 +271,7 @@ const Exercises = {
     container.appendChild(wrapper);
   },
 
-  // === Wertetabelle ausfuellen ===
+  // === Wertetabelle ausfüllen ===
   renderFillTable(exercise, container, onComplete) {
     var wrapper = document.createElement('div');
     wrapper.className = 'exercise-fill-table';

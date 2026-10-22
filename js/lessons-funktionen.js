@@ -24,7 +24,7 @@ const LessonsFunktionen = [
         <p>
           Um 8 Uhr sind es 12 Grad, um 12 Uhr 18 Grad, um 16 Uhr 21 Grad.
           Zu <strong>jeder Uhrzeit</strong> gibt es <strong>genau eine Temperatur</strong> - das ist eine Funktion!
-          Aber umgekehrt? 18 Grad koennte es um 12 Uhr UND um 20 Uhr haben - das ist OK,
+          Aber umgekehrt? 18 Grad könnte es um 12 Uhr UND um 20 Uhr haben - das ist OK,
           denn die Zuordnung geht von x (Uhrzeit) zu y (Temperatur), nicht umgekehrt.
         </p>
 
@@ -38,7 +38,7 @@ const LessonsFunktionen = [
 
         <h4>Funktionswerte ablesen</h4>
         <p>
-          Wenn du den <strong>x-Wert</strong> kennst, kannst du den zugehoerigen <strong>y-Wert</strong>
+          Wenn du den <strong>x-Wert</strong> kennst, kannst du den zugehörigen <strong>y-Wert</strong>
           (= Funktionswert) am Graphen ablesen. Gehe dazu vom x-Wert senkrecht nach oben (oder unten)
           bis zur Kurve und lies den y-Wert ab.
         </p>
@@ -79,7 +79,7 @@ const LessonsFunktionen = [
         },
         {
           label: 'Schritt 3: y-Wert ablesen',
-          html: 'Lies an der y-Achse ab, auf welcher Hoehe du die Kurve getroffen hast. Hier: <strong>y = 3,5</strong>.'
+          html: 'Lies an der y-Achse ab, auf welcher Höhe du die Kurve getroffen hast. Hier: <strong>y = 3,5</strong>.'
         },
         {
           label: 'Schritt 4: Ergebnis notieren',
@@ -153,20 +153,20 @@ const LessonsFunktionen = [
         <div class="info-box">
           Eine <strong>Funktionsgleichung</strong> beschreibt den Zusammenhang zwischen x und y
           als <strong>mathematische Formel</strong>, z. B. <strong>y = 2x + 3</strong>.<br>
-          Mit der Gleichung kannst du fuer <strong>jeden x-Wert</strong> den zugehoerigen y-Wert berechnen.
+          Mit der Gleichung kannst du für <strong>jeden x-Wert</strong> den zugehörigen y-Wert berechnen.
         </div>
 
-        <h4>Alltagsbeispiel: Aepfel auf dem Markt</h4>
+        <h4>Alltagsbeispiel: Äpfel auf dem Markt</h4>
         <p>
-          1 kg Aepfel kostet 2,50 Euro. Wie viel kosten 3 kg? Oder 5 kg?<br>
+          1 kg Äpfel kostet 2,50 Euro. Wie viel kosten 3 kg? Oder 5 kg?<br>
           Die Funktionsgleichung lautet: <strong>y = 2,5 \u00B7 x</strong> (Preis = 2,50 \u00B7 Menge).<br>
-          Fuer x = 3: y = 2,5 \u00B7 3 = <strong>7,50 Euro</strong>.<br>
-          Fuer x = 5: y = 2,5 \u00B7 5 = <strong>12,50 Euro</strong>.
+          Für x = 3: y = 2,5 \u00B7 3 = <strong>7,50 Euro</strong>.<br>
+          Für x = 5: y = 2,5 \u00B7 5 = <strong>12,50 Euro</strong>.
         </p>
 
         <h4>Von der Gleichung zur Wertetabelle</h4>
         <p>
-          <strong>Schritt 1:</strong> Waehle verschiedene x-Werte (z. B. -2, -1, 0, 1, 2, 3).<br>
+          <strong>Schritt 1:</strong> Wähle verschiedene x-Werte (z. B. -2, -1, 0, 1, 2, 3).<br>
           <strong>Schritt 2:</strong> Setze jeden x-Wert in die Gleichung ein und berechne y.<br>
           <strong>Schritt 3:</strong> Schreibe die Ergebnisse in eine Tabelle.
         </p>
@@ -180,7 +180,7 @@ const LessonsFunktionen = [
         <div id="graph-fgl-table" class="math-graph"></div>
 
         <div class="warning-box">
-          <strong>Tipp:</strong> Pruefe deine Wertetabelle, indem du einen Punkt im Graphen kontrollierst.
+          <strong>Tipp:</strong> Prüfe deine Wertetabelle, indem du einen Punkt im Graphen kontrollierst.
           Liegt er auf der Geraden? Dann hast du richtig gerechnet!
         </div>
 
@@ -208,11 +208,11 @@ const LessonsFunktionen = [
       }
     },
     example: {
-      title: 'Wertetabelle fuer y = 2x + 1 erstellen',
+      title: 'Wertetabelle für y = 2x + 1 erstellen',
       steps: [
         {
-          label: 'Schritt 1: x-Werte waehlen',
-          html: 'Waehle z. B. x = -1, 0, 1, 2, 3.'
+          label: 'Schritt 1: x-Werte wählen',
+          html: 'Wähle z. B. x = -1, 0, 1, 2, 3.'
         },
         {
           label: 'Schritt 2: y-Werte berechnen',
@@ -293,17 +293,17 @@ const LessonsFunktionen = [
           Der Graph geht <strong>immer durch den Ursprung (0|0)</strong>.
         </div>
 
-        <h4>Alltagsbeispiel: Preis pro kg Aepfel</h4>
+        <h4>Alltagsbeispiel: Preis pro kg Äpfel</h4>
         <p>
-          Stell dir vor, 1 kg Aepfel kostet 2 Euro. Dann kosten 2 kg genau 4 Euro, 3 kg genau 6 Euro usw.
-          Die Funktion dafuer lautet <strong>y = 2x</strong> (Preis = 2 * Menge).
+          Stell dir vor, 1 kg Äpfel kostet 2 Euro. Dann kosten 2 kg genau 4 Euro, 3 kg genau 6 Euro usw.
+          Die Funktion dafür lautet <strong>y = 2x</strong> (Preis = 2 * Menge).
           Egal wie viel du kaufst: der Preis verdoppelt, verdreifacht, vervierfacht sich proportional zur Menge.
           Und bei 0 kg zahlst du 0 Euro - deshalb geht der Graph durch den Ursprung.
         </p>
 
         <h4>Das Steigungsdreieck</h4>
         <p>
-          <strong>m</strong> heisst <strong>Steigung</strong>. Sie gibt an, wie steil die Gerade ist.
+          <strong>m</strong> heißt <strong>Steigung</strong>. Sie gibt an, wie steil die Gerade ist.
           Um die Steigung abzulesen, zeichnest du ein <strong>Steigungsdreieck</strong> zwischen zwei Punkten auf der Geraden:
         </p>
         <div class="formula-box">
@@ -314,21 +314,21 @@ const LessonsFunktionen = [
 
         <h4>Verschiedene Steigungen vergleichen</h4>
         <p>
-          Je groesser der Betrag von m (also |m|), desto <strong>steiler</strong> ist die Gerade.
+          Je größer der Betrag von m (also |m|), desto <strong>steiler</strong> ist die Gerade.
           Vergleiche: y = 0,5x (flach), y = 2x (mittel) und y = 5x (steil):
         </p>
         <div id="graph-l1-compare" class="math-graph"></div>
 
         <h4>Positive und negative Steigung</h4>
         <ul>
-          <li><strong>m > 0</strong> -> Gerade steigt von links nach rechts (aufwaerts)</li>
-          <li><strong>m < 0</strong> -> Gerade faellt von links nach rechts (abwaerts)</li>
+          <li><strong>m > 0</strong> -> Gerade steigt von links nach rechts (aufwärts)</li>
+          <li><strong>m < 0</strong> -> Gerade fällt von links nach rechts (abwärts)</li>
         </ul>
         <p>Hier y = 2x (steigend, blau) und y = -2x (fallend, rot):</p>
         <div id="graph-l1-negative" class="math-graph"></div>
 
         <h4>Probier es selbst aus!</h4>
-        <p>Verschiebe den Regler, um die Steigung m zu veraendern. Beobachte, wie sich die Gerade dreht:</p>
+        <p>Verschiebe den Regler, um die Steigung m zu verändern. Beobachte, wie sich die Gerade dreht:</p>
         <div id="graph-l1-slider" class="math-graph"></div>
 
         <div class="warning-box">
@@ -398,8 +398,8 @@ const LessonsFunktionen = [
       title: 'Steigung aus einem Graphen ablesen (y = 1,5x)',
       steps: [
         {
-          label: 'Schritt 1: Zwei Punkte waehlen',
-          html: 'Waehle zwei Punkte auf der Geraden, z. B. <strong>P1(0|0)</strong> und <strong>P2(2|3)</strong>.'
+          label: 'Schritt 1: Zwei Punkte wählen',
+          html: 'Wähle zwei Punkte auf der Geraden, z. B. <strong>P1(0|0)</strong> und <strong>P2(2|3)</strong>.'
         },
         {
           label: 'Schritt 2: Steigungsdreieck einzeichnen',
@@ -506,7 +506,7 @@ const LessonsFunktionen = [
         <div id="graph-l2-compare" class="math-graph"></div>
 
         <h4>Probier es selbst aus!</h4>
-        <p>Verschiebe die Regler fuer m und c und beobachte, wie sich die Gerade veraendert:</p>
+        <p>Verschiebe die Regler für m und c und beobachte, wie sich die Gerade verändert:</p>
         <div id="graph-l2-slider" class="math-graph"></div>
 
         <div class="warning-box">
@@ -566,7 +566,7 @@ const LessonsFunktionen = [
       }
     },
     example: {
-      title: 'y = 2x + 3 Schritt fuer Schritt',
+      title: 'y = 2x + 3 Schritt für Schritt',
       steps: [
         {
           label: 'Schritt 1: Wertetabelle erstellen',
@@ -667,13 +667,13 @@ const LessonsFunktionen = [
           Die Steigungen sind <strong>negative Kehrwerte</strong> voneinander.
         </div>
         <p>
-          <strong>Trick:</strong> Um den negativen Kehrwert zu finden: Drehe den Bruch um und aendere das Vorzeichen!<br>
+          <strong>Trick:</strong> Um den negativen Kehrwert zu finden: Drehe den Bruch um und ändere das Vorzeichen!<br>
           Beispiel: m = 2 -> Kehrwert = 1/2 -> negativ = <strong>-1/2 = -0,5</strong>
         </p>
         <p>Hier y = 2x (blau) und y = -0,5x (rot) - sie stehen senkrecht aufeinander (90-Grad-Winkel):</p>
         <div id="graph-l4-perp" class="math-graph"></div>
 
-        <h4>Beispiele fuer senkrechte Steigungen:</h4>
+        <h4>Beispiele für senkrechte Steigungen:</h4>
         <ul>
           <li>m = 2 -> senkrecht: m = <strong>-1/2 = -0,5</strong></li>
           <li>m = -3 -> senkrecht: m = <strong>1/3</strong></li>
@@ -682,13 +682,13 @@ const LessonsFunktionen = [
 
         <h4>Probier es selbst aus!</h4>
         <p>
-          Die blaue Gerade hat m = 2. Verschiebe den Regler fuer die zweite Gerade (rot).
+          Die blaue Gerade hat m = 2. Verschiebe den Regler für die zweite Gerade (rot).
           Die Anzeige sagt dir, ob die Geraden parallel, senkrecht oder sich einfach schneiden:
         </p>
         <div id="graph-l4-slider" class="math-graph"></div>
 
         <div class="warning-box">
-          <strong>Tipp:</strong> Um den negativen Kehrwert zu finden: Drehe den Bruch um und aendere das Vorzeichen!<br>
+          <strong>Tipp:</strong> Um den negativen Kehrwert zu finden: Drehe den Bruch um und ändere das Vorzeichen!<br>
           Beispiel: m = 3/4 -> Kehrwert: 4/3 -> negativ: <strong>-4/3</strong>
         </div>
 
@@ -841,7 +841,7 @@ const LessonsFunktionen = [
 
         <div class="info-box">
           <strong>Methode 3: Steigung m und ein Punkt gegeben</strong><br>
-          Setze den Punkt in y = mx + c ein und loese nach c auf:
+          Setze den Punkt in y = mx + c ein und löse nach c auf:
         </div>
         <div class="formula-box">
           <strong>c = y - m * x</strong>
@@ -860,7 +860,7 @@ const LessonsFunktionen = [
 
         <div class="warning-box">
           <strong>Tipp:</strong> Mache immer eine <strong>Probe</strong>! Setze einen bekannten Punkt in deine
-          Gleichung ein und pruefe, ob die Gleichung stimmt.
+          Gleichung ein und prüfe, ob die Gleichung stimmt.
         </div>
 
         <details class="book-pages">
@@ -974,20 +974,20 @@ const LessonsFunktionen = [
           <div class="book-title">Im Buch nachschlagen</div>
           <strong>Vorbereitungsblatt Nr. 7:</strong> Modellieren<br>
           <strong>Buch:</strong> S. 87 | <strong>Aufgaben:</strong> S. 87 Nr. 2, A<br>
-          <strong>Rueckspiegel Lineare Funktionen:</strong> S. 96<br>
-          <strong>Tipp:</strong> Merke und Beispiele auf S. 87 durchlesen. Zum Wiederholen den Rueckspiegel S. 96 rechnen!
+          <strong>Rückspiegel Lineare Funktionen:</strong> S. 96<br>
+          <strong>Tipp:</strong> Merke und Beispiele auf S. 87 durchlesen. Zum Wiederholen den Rückspiegel S. 96 rechnen!
         </div>
 
-        <h3>Alltagsprobleme mit Geraden loesen</h3>
+        <h3>Alltagsprobleme mit Geraden lösen</h3>
         <p>
           Viele Situationen aus dem Alltag lassen sich mit linearen Funktionen beschreiben.
-          Der Trick: <strong>Uebersetze die Textaufgabe in eine Gleichung y = mx + c</strong>.
+          Der Trick: <strong>Übersetze die Textaufgabe in eine Gleichung y = mx + c</strong>.
         </p>
 
         <div class="info-box">
           <strong>So erkennst du m und c im Text:</strong><br>
           <ul>
-            <li><strong>c (y-Achsenabschnitt)</strong> = Grundgebuehr, Startwert, Anfangshoehe, Fixkosten</li>
+            <li><strong>c (y-Achsenabschnitt)</strong> = Grundgebühr, Startwert, Anfangshöhe, Fixkosten</li>
             <li><strong>m (Steigung)</strong> = Preis pro Einheit, Verbrauch pro Stunde, Kosten pro km</li>
           </ul>
           Denk dran: <strong>c = was du am Anfang schon hast/zahlst</strong>, <strong>m = was pro Schritt dazukommt</strong>.
@@ -995,16 +995,16 @@ const LessonsFunktionen = [
 
         <h4>Beispiel 1: Taxi-Vergleich</h4>
         <p>
-          Taxi A: 3,50 Euro Grundgebuehr + 2 Euro/km -> <strong>y = 2x + 3,5</strong><br>
-          Taxi B: 5 Euro Grundgebuehr + 1,50 Euro/km -> <strong>y = 1,5x + 5</strong><br>
-          Der Schnittpunkt zeigt, ab wann Taxi B guenstiger ist:
+          Taxi A: 3,50 Euro Grundgebühr + 2 Euro/km -> <strong>y = 2x + 3,5</strong><br>
+          Taxi B: 5 Euro Grundgebühr + 1,50 Euro/km -> <strong>y = 1,5x + 5</strong><br>
+          Der Schnittpunkt zeigt, ab wann Taxi B günstiger ist:
         </p>
         <div id="graph-l6-taxi" class="math-graph"></div>
 
         <h4>Beispiel 2: Brennende Kerze</h4>
         <p>
           Eine Kerze ist 15 cm lang und brennt 1,5 cm pro Stunde ab -> <strong>y = -1,5x + 15</strong><br>
-          Hier ist m negativ, weil die Kerze kuerzer wird! Bei y = 0 ist sie abgebrannt:
+          Hier ist m negativ, weil die Kerze kürzer wird! Bei y = 0 ist sie abgebrannt:
         </p>
         <div id="graph-l6-candle" class="math-graph"></div>
 
@@ -1030,7 +1030,7 @@ const LessonsFunktionen = [
         <details class="book-pages">
           <summary>Original-Buchseiten anzeigen</summary>
           <img src="../Inhalt_Mathebuch/IMG_2001.JPG" alt="Buch S. 87 - Modellieren" style="max-width:100%; margin-top:0.5em;">
-          <img src="../Inhalt_Mathebuch/IMG_2002.JPG" alt="Buch S. 96 - Rueckspiegel" style="max-width:100%; margin-top:0.5em;">
+          <img src="../Inhalt_Mathebuch/IMG_2002.JPG" alt="Buch S. 96 - Rückspiegel" style="max-width:100%; margin-top:0.5em;">
         </details>
       `,
       onRender: function () {
@@ -1064,7 +1064,7 @@ const LessonsFunktionen = [
       }
     },
     example: {
-      title: 'Taxi-Vergleich: Ab wann ist Taxi B guenstiger?',
+      title: 'Taxi-Vergleich: Ab wann ist Taxi B günstiger?',
       steps: [
         {
           label: 'Schritt 1: Variablen festlegen',
@@ -1072,7 +1072,7 @@ const LessonsFunktionen = [
         },
         {
           label: 'Schritt 2: Gleichungen aufstellen',
-          html: '<div class="example-calc">Taxi A: 3 Euro Grundgebuehr + 2 Euro/km \u2192 <strong>y = 2x + 3</strong><br>Taxi B: 5 Euro Grundgebuehr + 1,50 Euro/km \u2192 <strong>y = 1,5x + 5</strong></div>'
+          html: '<div class="example-calc">Taxi A: 3 Euro Grundgebühr + 2 Euro/km \u2192 <strong>y = 2x + 3</strong><br>Taxi B: 5 Euro Grundgebühr + 1,50 Euro/km \u2192 <strong>y = 1,5x + 5</strong></div>'
         },
         {
           label: 'Schritt 3: Gleichsetzen',

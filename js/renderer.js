@@ -75,7 +75,7 @@ const Renderer = {
 
     container.appendChild(tabsDiv);
 
-    // Erklaerung
+    // Erklärung
     const explanationSection = document.createElement('section');
     explanationSection.className = 'phase explanation active';
     explanationSection.id = 'phase-explanation';
@@ -112,7 +112,7 @@ const Renderer = {
 
     container.appendChild(exampleSection);
 
-    // Uebungen
+    // Übungen
     const exercisesSection = document.createElement('section');
     exercisesSection.className = 'phase exercises';
     exercisesSection.id = 'phase-exercises';
