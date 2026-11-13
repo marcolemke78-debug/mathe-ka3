@@ -1072,15 +1072,15 @@ const LessonsFunktionen = [
         },
         {
           label: 'Schritt 2: Gleichungen aufstellen',
-          html: '<div class="example-calc">Taxi A: 3 Euro Grundgebühr + 2 Euro/km \u2192 <strong>y = 2x + 3</strong><br>Taxi B: 5 Euro Grundgebühr + 1,50 Euro/km \u2192 <strong>y = 1,5x + 5</strong></div>'
+          html: '<div class="example-calc">Taxi A: 3,50 Euro Grundgebühr + 2 Euro/km \u2192 <strong>y = 2x + 3,5</strong><br>Taxi B: 5 Euro Grundgebühr + 1,50 Euro/km \u2192 <strong>y = 1,5x + 5</strong></div>'
         },
         {
           label: 'Schritt 3: Gleichsetzen',
-          html: '<div class="example-calc">2x + 3 = 1,5x + 5<br>2x - 1,5x = 5 - 3<br>0,5x = 2<br><strong>x = 4</strong></div>'
+          html: '<div class="example-calc">2x + 3,5 = 1,5x + 5<br>2x - 1,5x = 5 - 3,5<br>0,5x = 1,5<br><strong>x = 3</strong></div>'
         },
         {
           label: 'Schritt 4: Antwort formulieren',
-          html: 'Ab <strong>4 km</strong> ist Taxi B g\u00FCnstiger. Bei genau 4 km kosten beide gleich viel (jeweils 11 Euro).'
+          html: 'Bei genau <strong>3 km</strong> kosten beide gleich viel (jeweils 9,50 Euro). Erst bei mehr als 3 km ist Taxi B g\u00FCnstiger.'
         }
       ]
     },
@@ -1094,14 +1094,14 @@ const LessonsFunktionen = [
       },
       {
         type: 'number-input',
-        question: '<strong>Fitnessstudio A:</strong> 20 \u20AC/Monat + 5 \u20AC pro Besuch.<br><strong>Fitnessstudio B:</strong> 50 \u20AC/Monat, Besuche kostenlos.<br>Ab wie vielen Besuchen pro Monat lohnt sich Studio B?',
-        correctAnswer: 6,
+        question: '<strong>Fitnessstudio A:</strong> 20 \u20AC/Monat + 5 \u20AC pro Besuch.<br><strong>Fitnessstudio B:</strong> 50 \u20AC/Monat, Besuche kostenlos.<br>Ab wie vielen Besuchen pro Monat ist Studio B g\u00FCnstiger?',
+        correctAnswer: 7,
         tolerance: 0.01,
         label: 'Besuche',
         placeholder: 'Anzahl Besuche',
         unit: 'Besuche',
-        explanation: 'Studio A: y = 5x + 20. Studio B: y = 50. Gleichsetzen: 5x + 20 = 50 \u2192 5x = 30 \u2192 x = 6. Ab 6 Besuchen lohnt sich Studio B.',
-        hint: '5x + 20 = 50 \u2192 5x = 30 \u2192 x = ?'
+        explanation: 'Studio A: y = 5x + 20. Studio B: y = 50. Gleichsetzen: 5x + 20 = 50 \u2192 5x = 30 \u2192 x = 6. Bei genau 6 Besuchen kosten beide gleich viel (50 \u20AC). Erst ab 7 Besuchen ist Studio B g\u00FCnstiger (A: 55 \u20AC, B: 50 \u20AC).',
+        hint: '5x + 20 = 50 \u2192 5x = 30 \u2192 x = ? Bei diesem x kosten beide gleich viel. Ab welchem Besuch ist B wirklich g\u00FCnstiger?'
       },
       {
         type: 'number-input',

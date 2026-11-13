@@ -533,9 +533,11 @@ const Exercises = {
         feedbackEl.style.display = 'block';
         return;
       }
+      // Text vergleichen statt Position, damit doppelte Karten (z. B. 2x "parallel") richtig zählen
+      function plainText(html) { return String(html).replace(/<[^>]*>/g, '').trim(); }
       var allCorrect = true;
       for (var k = 0; k < total; k++) {
-        if (connections[k] !== k) { allCorrect = false; break; }
+        if (plainText(exercise.pairs[connections[k]].right) !== plainText(exercise.pairs[k].right)) { allCorrect = false; break; }
       }
       if (allCorrect) {
         feedbackEl.textContent = 'Alle Zuordnungen korrekt!';
